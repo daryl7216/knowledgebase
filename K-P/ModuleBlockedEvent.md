@@ -1,4 +1,3 @@
-````markdown
 ## Crowdstrike Table: ModuleBlockedEvent
 
 ### 1. Table Name
