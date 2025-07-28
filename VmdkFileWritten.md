@@ -55,3 +55,4 @@ event_simpleName=VmdkFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find VMDK files that were created using a temporary file (Windows only)
 event_simpleName=VmdkFileWritten a.TemporaryFileName!=""
 ```
+---
