@@ -49,3 +49,4 @@ event_simpleName=UnsignedModuleLoad SHA256HashData="a1b2c3d4e5f6a1b2c3d4e5f6a1b2
 // Find all unsigned modules loaded into user memory space
 event_simpleName=UnsignedModuleLoad MappedFromUserMode=1
 ```
+---
