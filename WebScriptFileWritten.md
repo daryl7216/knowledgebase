@@ -53,3 +53,4 @@ event_simpleName=WebScriptFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find web scripts based on their context base file name
 event_simpleName=WebScriptFileWritten ContextBaseFileName="payload.vbs"
 ```
+---
