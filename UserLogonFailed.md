@@ -42,3 +42,4 @@ event_simpleName=UserLogonFailed UserSid="S-1-5-21-*"
 // Find failed logons where the user has administrator privileges (UserLogonFlags=2)
 event_simpleName=UserLogonFailed UserLogonFlags=2
 ```
+---
