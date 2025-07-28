@@ -53,3 +53,4 @@ event_simpleName=ZipFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find ZIP files based on their context base file name
 event_simpleName=ZipFileWritten ContextBaseFileName="backup.zip"
 ```
+---
