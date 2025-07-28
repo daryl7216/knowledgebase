@@ -56,3 +56,4 @@ event_simpleName=UserLogon UserIsAdmin=true
 // Investigate logons authenticated by a specific domain controller (Windows only)
 event_simpleName=UserLogon LogonServer="DC02"
 ```
+---
