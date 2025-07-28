@@ -39,3 +39,4 @@ event_simpleName=UserAccountDeleted UserName="service-acct"
 // Find all user accounts deleted by a specific process ID
 event_simpleName=UserAccountDeleted RpcClientProcessId="1337"
 ```
+---
