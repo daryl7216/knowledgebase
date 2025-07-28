@@ -41,3 +41,4 @@ event_simpleName=UserAccountCreated UserName="BackupSvc"
 // Find all user accounts created by a specific parent process ID
 event_simpleName=UserAccountCreated RpcClientProcessId="1337"
 ```
+---
