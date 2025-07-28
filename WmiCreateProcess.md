@@ -50,3 +50,4 @@ event_simpleName=WmiCreateProcess UserName="*Admin*"
 // Investigate WMI activity originating from a specific RPC client process ID
 event_simpleName=WmiCreateProcess RpcClientProcessId="1234"
 ```
+---
