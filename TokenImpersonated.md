@@ -44,3 +44,4 @@ event_simpleName=TokenImpersonated ImpersonatedUserName="*SYSTEM"
 // Investigate token impersonation by a specific original user SID
 event_simpleName=TokenImpersonated OriginalUserSid="S-1-5-21-1234567890-123456789-1234567890-500"
 ```
+---
