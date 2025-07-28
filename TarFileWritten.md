@@ -51,3 +51,4 @@ event_simpleName=TarFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find TAR files based on their context base file name, which might indicate staging
 event_simpleName=TarFileWritten ContextBaseFileName="*backup*.tar"
 ```
+---
