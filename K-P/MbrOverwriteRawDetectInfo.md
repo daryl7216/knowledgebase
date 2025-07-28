@@ -1,4 +1,3 @@
-````markdown
 ## Crowdstrike Table: MbrOverwriteRawDetectInfo
 
 ### 1. Table Name
@@ -29,7 +28,7 @@ This table provides raw detection information related to Master Boot Record (MBR
   "VolumeName": "\\\\.\\PhysicalDrive0",
   "CommandLine": "malicious.exe -install"
 }
-````
+```
 
 ---
 
@@ -50,5 +49,3 @@ event_simpleName=MbrOverwriteRawDetectInfo CommandLine="* -install*"
 ```
 
 ---
-
-```

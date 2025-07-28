@@ -1,4 +1,3 @@
-````markdown
 ## Crowdstrike Table: MemoryProtectionUpdated
 
 ### 1. Table Name
@@ -27,7 +26,7 @@ This table triggers if a new executable memory region is mapped which is writabl
   "MemoryProtectionFlags": 4,
   "Length": 4096
 }
-````
+```
 
 ---
 
@@ -42,5 +41,3 @@ event_simpleName=MemoryProtectionUpdated Length=4096
 ```
 
 ---
-
-```

@@ -1,4 +1,3 @@
-````markdown
 ## Crowdstrike Table: MachOFileWritten
 
 ### 1. Table Name
@@ -27,7 +26,7 @@ This table records events when a process completes writing a MachO file. It is u
   "TargetFileName": "/usr/local/bin/example_macho",
   "ContextBaseFileName": "example_macho"
 }
-````
+```
 
 ---
 
@@ -42,5 +41,3 @@ event_simpleName=MachOFileWritten ContextBaseFileName="launcher"
 ```
 
 ---
-
-```
