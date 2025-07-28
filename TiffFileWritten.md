@@ -51,3 +51,4 @@ event_simpleName=TiffFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find TIFF files based on their context base file name
 event_simpleName=TiffFileWritten ContextBaseFileName="secret_scan.tif"
 ```
+---
