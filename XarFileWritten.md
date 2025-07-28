@@ -53,3 +53,4 @@ event_simpleName=XarFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find XAR files based on their context base file name
 event_simpleName=XarFileWritten ContextBaseFileName="important_package.xar"
 ```
+---
