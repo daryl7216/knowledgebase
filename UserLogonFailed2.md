@@ -48,3 +48,4 @@ event_simpleName=UserLogonFailed2 ClientComputerName="SUSPICIOUS-ENDPOINT"
 // Look for failed logons to a specific domain (Windows only)
 event_simpleName=UserLogonFailed2 LogonDomain="CORPORATE"
 ```
+---
