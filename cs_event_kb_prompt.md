@@ -1,4 +1,4 @@
-## Crowdstrike Table: Arc File Written Event
+## Crowdstrike Table: ArcFileWritten
 
 ### 1. Table Name
 **ArcFileWritten**
@@ -55,7 +55,7 @@ event_simpleName=ArcFileWritten ContextBaseFileName="archive.rar"
 
 ---
 
-## Crowdstrike Table: Arj File Written Event
+## Crowdstrike Table: ArjFileWritten
 
 ### 1. Table Name
 **ArjFileWritten**
@@ -111,7 +111,7 @@ event_simpleName=ArjFileWritten ContextBaseFileName="backup.arj"
 ```
 
 ---
-## Crowdstrike Table: ASEP Value Update Event
+## Crowdstrike Table: AsepValueUpdate
 
 ### 1. Table Name
 **AsepValueUpdate**
@@ -171,7 +171,7 @@ event_simpleName=AsepValueUpdate RegOperationType=REG_DELETE_VALUE_KEY
 ```
 
 ---
-## Crowdstrike Table: BITS Job Created Event
+## Crowdstrike Table: BITSJobCreated
 
 ### 1. Table Name
 **BITSJobCreated**
@@ -219,7 +219,7 @@ event_simpleName=BITSJobCreated RpcClientProcessId="7890"
 event_simpleName=BITSJobCreated UserName="SUSPICIOUS_USER" TargetFileName="*temp\\*.dll*"
 ```
 ---
-## Crowdstrike Table: BZip2 File Written Event
+## Crowdstrike Table: BZip2FileWritten
 
 ### 1. Table Name
 **BZip2FileWritten**
@@ -331,7 +331,7 @@ event_simpleName=BZip2FileWritten SHA256HashData="a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5
 event_simpleName=BZip2FileWritten FileCategory=ARCHIVES ContextProcessId="12345"
 ```
 ---
-## Crowdstrike Table: BLF File Written Event
+## Crowdstrike Table: BlfFileWritten
 
 ### 1. Table Name
 **BlfFileWritten**
@@ -386,7 +386,7 @@ event_simpleName=BlfFileWritten TargetFileName="*temp_update.blf*"
 event_simpleName=BlfFileWritten ContextBaseFileName="diagnostic.blf"
 ```
 ---
-## Crowdstrike Table: BMP File Written Event
+## Crowdstrike Table: BmpFileWritten
 
 ### 1. Table Name
 **BmpFileWritten**
@@ -494,7 +494,7 @@ event_simpleName=ArcFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=ArcFileWritten ContextBaseFileName="archive.rar"
 ```
 ---
-## Crowdstrike Table: Classified Module Load Event
+## Crowdstrike Table: ClassifiedModuleLoad 
 
 ### 1. Table Name
 **ClassifiedModuleLoad**
@@ -547,7 +547,7 @@ event_simpleName=ClassifiedModuleLoad FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=ClassifiedModuleLoad ContextBaseFileName="module.dll"
 ```
 ---
-## Crowdstrike Table: Command History Event
+## Crowdstrike Table: CommandHistory 
 
 ### 1. Table Name
 **CommandHistory**
@@ -603,7 +603,7 @@ event_simpleName=CommandHistory TargetProcessId=12345
 event_simpleName=CommandHistory CommandHistory="*powershell*"
 ```
 ---
-## Crowdstrike Table: Service Creation Event
+## Crowdstrike Table: CreateService
 
 ### 1. Table Name
 **CreateService**
@@ -654,7 +654,7 @@ event_simpleName=CreateService ServiceImagePath="C:\\Program Files\\MyApplicatio
 event_simpleName=CreateService ServiceType=16
 ```
 ---
-## Crowdstrike Table: Critical Environment Variable Changed Event
+## Crowdstrike Table: CriticalEnvironmentVariableChanged 
 
 ### 1. Table Name
 **CriticalEnvironmentVariableChanged**
@@ -697,7 +697,7 @@ event_simpleName=CriticalEnvironmentVariableChanged EnvironmentVariableName="PAT
 event_simpleName=CriticalEnvironmentVariableChanged EnvironmentVariableValue="*new/custom/path*"
 ```
 ---
-## Crowdstrike Table: Critical File Accessed Event
+## Crowdstrike Table: CriticalFileAccessed 
 
 ### 1. Table Name
 **CriticalFileAccessed**
@@ -754,7 +754,7 @@ event_simpleName=CriticalFileAccessed UnixMode="0777"
 event_simpleName=CriticalFileAccessed TreeId="abc-xyz"
 ```
 ---
-## Crowdstrike Table: Critical File Modified Event
+## Crowdstrike Table: CriticalFileModified 
 
 ### 1. Table Name
 **CriticalFileModified**
@@ -804,7 +804,7 @@ event_simpleName=CriticalFileModified UID=0
 event_simpleName=CriticalFileModified GID=0
 ```
 ---
-## Crowdstrike Table: CRX File Written Event
+## Crowdstrike Table: CrxFileWritten 
 
 ### 1. Table Name
 **CrxFileWritten**
@@ -863,7 +863,7 @@ event_simpleName=CrxFileWritten ContextBaseFileName="adblock.crx"
 event_simpleName=CrxFileWritten UserName="johndoe"
 ```
 ---
-## Crowdstrike Table: DCSync Attempted Event
+## Crowdstrike Table: DCSyncAttempted 
 
 ### 1. Table Name
 **DCSyncAttempted**
@@ -922,7 +922,7 @@ event_simpleName=DCSyncAttempted SubjectDomainNameEtw="corp.example.com"
 event_simpleName=DCSyncAttempted event_simpleName=DCSyncAttempted NOT UserName IN ("DC01$", "DC02$")
 ```
 ---
-## Crowdstrike Table: Deb File Written Event
+## Crowdstrike Table: DebFileWritten 
 
 ### 1. Table Name
 **DebFileWritten**
@@ -1043,7 +1043,7 @@ event_simpleName=DebFileWritten SHA256HashData="a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6
 event_simpleName=DebFileWritten FileCategory=1
 ```
 ---
-## Crowdstrike Table: Directory Traversal Over SMB Event
+## Crowdstrike Table: DirectoryTraversalOverSMB 
 
 ### 1. Table Name
 **DirectoryTraversalOverSMB**
@@ -1103,7 +1103,7 @@ event_simpleName=DirectoryTraversalOverSMB UserName="malicious_user"
 event_simpleName=DirectoryTraversalOverSMB LogonType=3
 ```
 ---
-## Crowdstrike Table: DLL Injection Event
+## Crowdstrike Table: DllInjection 
 
 ### 1. Table Name
 **DllInjection**
@@ -1160,7 +1160,7 @@ event_simpleName=DllInjection InjectedDll="*malicious.dll*"
 event_simpleName=DllInjection InjectedThreadFlag=256
 ```
 ---
-## Crowdstrike Table: Dump File Written Event
+## Crowdstrike Table: DumpFileWritten
 
 ### 1. Table Name
 **DmpFileWritten**
@@ -1274,7 +1274,7 @@ event_simpleName=DmpFileWritten Size > 1048576
 event_simpleName=DmpFileWritten IsOnNetwork=true
 ```
 ---
-## Crowdstrike Table: DNS Request Event
+## Crowdstrike Table: DnsRequest
 
 ### 1. Table Name
 **DnsRequest**
@@ -1333,7 +1333,7 @@ event_simpleName=DnsRequest RequestType=1 | table DomainName, FirstIP4Record
 ```
 ---
 
-## Crowdstrike Table: Driver Load Event
+## Crowdstrike Table: DriverLoad
 
 ### 1. Table Name
 **DriverLoad**
@@ -1412,7 +1412,7 @@ event_simpleName=DriverLoad CompanyName="Malicious Corp"
 event_simpleName=DriverLoad OriginalFilename!=ImageFileName
 ```
 ---
-## Crowdstrike Table: Driver Loaded V2 Detect Info Event
+## Crowdstrike Table: DriverLoadedV2DetectInfo 
 
 ### 1. Table Name
 **DriverLoadedV2DetectInfo**
@@ -1481,7 +1481,7 @@ event_simpleName=DriverLoadedV2DetectInfo ImageFileName="C:\\Windows\\System32\\
 ```
 ---
 
-## Crowdstrike Table: ELF File Written Event
+## Crowdstrike Table: ELFFileWritten 
 
 ### 1. Table Name
 **ELFFileWritten**
@@ -1523,7 +1523,7 @@ event_simpleName=ELFFileWritten TargetFileName="*.elf" OR TargetFileName="*.so" 
 ```
 ---
 
-## Crowdstrike Table: Email File Written Event
+## Crowdstrike Table: EmailFileWritten 
 
 ### 1. Table Name
 **EmailFileWritten**
@@ -1565,7 +1565,7 @@ event_simpleName=EmailFileWritten TargetFileName="*.eml" OR TargetFileName="*.ms
 ```
 ---
 
-## Crowdstrike Table: ESE File Written Event
+## Crowdstrike Table: EseFileWritten 
 
 ### 1. Table Name
 **EseFileWritten**
@@ -1620,7 +1620,7 @@ event_simpleName=EseFileWritten ContextBaseFileName="app_data.jrs"
 ```
 ---
 
-## Crowdstrike Table: Event Log Cleared Event
+## Crowdstrike Table: EventLogCleared
 
 ### 1. Table Name
 **EventLogCleared**
@@ -1668,7 +1668,7 @@ event_simpleName=EventLogCleared RpcClientProcessId="4"
 ```
 ---
 
-## Crowdstrike Table: Executable Deleted Event
+## Crowdstrike Table: ExecutableDeleted 
 
 ### 1. Table Name
 **ExecutableDeleted**
@@ -1710,7 +1710,7 @@ event_simpleName=ExecutableDeleted TargetFileName="*powershell.exe*" OR TargetFi
 ```
 ---
 
-## Crowdstrike Table: File Creation Event
+## Crowdstrike Table: FileCreationInfo
 
 ### 1. Table Name
 **FileCreateInfo**
@@ -1753,7 +1753,7 @@ event_simpleName=FileCreateInfo TargetFileName="/tmp/*" UID="0"
 ```
 ---
 
-## Crowdstrike Table: File Rename Event
+## Crowdstrike Table: FileRenameInfo
 
 ### 1. Table Name
 **FileRenameInfo**
@@ -1800,7 +1800,7 @@ event_simpleName=FileRenameInfo SourceFileName="*C:\\Windows\\System32\\*"
 ```
 ---
 
-## Crowdstrike Table: Firewall Rule Deletion Event
+## Crowdstrike Table: FirewallDeleteRule 
 
 ### 1. Table Name
 **FirewallDeleteRule**
@@ -1857,7 +1857,7 @@ event_simpleName=FirewallDeleteRule RpcClientProcessId=1234
 ```
 ---
 
-## Crowdstrike Table: Firewall Rule Set Event
+## Crowdstrike Table: FirewallSetRule 
 
 ### 1. Table Name
 **FirewallSetRule**
@@ -1904,7 +1904,7 @@ event_simpleName=FirewallSetRule RpcClientProcessId="1234"
 ```
 ---
 
-## Crowdstrike Table: Generic File Written Event
+## Crowdstrike Table: GenericFileWritten 
 
 ### 1. Table Name
 **GenericFileWritten**
@@ -1962,7 +1962,7 @@ event_simpleName=GenericFileWritten FileOperatorSid="S-1-5-18"
 ```
 ---
 
-## Crowdstrike Table: GIF File Written Event
+## Crowdstrike Table: GifFileWritten
 
 ### 1. Table Name
 **GifFileWritten**
@@ -2018,7 +2018,7 @@ event_simpleName=GifFileWritten ContextBaseFileName="loading_spinner.gif"
 ```
 ---
 
-## Crowdstrike Table: Gzip File Written Event
+## Crowdstrike Table: GzipFileWritten 
 
 ### 1. Table Name
 **GzipFileWritten**
@@ -2060,7 +2060,7 @@ event_simpleName=GzipFileWritten TargetFileName="*.gz"
 ```
 ---
 
-## Crowdstrike Table: Hosted Service Start Event
+## Crowdstrike Table: HostedServiceStarted 
 
 ### 1. Table Name
 **HostedServiceStarted**
@@ -2111,7 +2111,7 @@ event_simpleName=HostedServiceStarted ServiceDisplayName="SuspiciousSvc" | table
 ```
 ---
 
-## Crowdstrike Table: HTTP Request Event
+## Crowdstrike Table: HttpRequest
 
 ### 1. Table Name
 **HttpRequest**
@@ -2171,7 +2171,7 @@ event_simpleName=HttpRequest HttpHost="*.xyz" OR HttpHost="*.top"
 ```
 ---
 
-## Crowdstrike Table: Image Extension File Written Event
+## Crowdstrike Table: ImgExtensionFileWritten
 
 ### 1. Table Name
 **ImgExtensionFileWritten**
@@ -2216,7 +2216,7 @@ event_simpleName=ImgExtensionFileWritten ContextBaseFileName IN ("*invoice*", "*
 
 ---
 
-## Crowdstrike Table: Thread Injection from Unsigned Module Event
+## Crowdstrike Table: InjectedThreadFromUnsignedModule
 
 ### 1. Table Name
 **InjectedThreadFromUnsignedModule**
@@ -2266,7 +2266,7 @@ event_simpleName=InjectedThreadFromUnsignedModule | table TargetProcessId, Targe
 ```
 ---
 
-## Crowdstrike Table: Iso Extension File Written Event
+## Crowdstrike Table: IsoExtensionFileWritten
 
 ### 1. Table Name
 **IsoExtensionFileWritten**
@@ -2309,7 +2309,7 @@ event_simpleName=IsoExtensionFileWritten ContextBaseFileName IN ("*invoice*", "*
 ```
 ---
 
-## Crowdstrike Table: Jar File Written Event
+## Crowdstrike Table: JarFileWritten 
 
 ### 1. Table Name
 **JarFileWritten**
@@ -2353,7 +2353,7 @@ event_simpleName=JarFileWritten ContextBaseFileName="*log4j*" OR ContextBaseFile
 ```
 ---
 
-## Crowdstrike Table: Java Class File Written Event
+## Crowdstrike Table: JavaClassFileWritten
 
 ### 1. Table Name
 **JavaClassFileWritten**
@@ -2398,7 +2398,7 @@ event_simpleName=JavaClassFileWritten TargetFileName IN ("*\\Temp\\*", "*\\AppDa
 event_simpleName=JavaClassFileWritten ContextBaseFileName="*Exploit*" OR ContextBaseFileName="*Shell*"
 ```
 ---
-## Crowdstrike Table: Java Thread Injection Event
+## Crowdstrike Table: JavaInjectedThread
 
 ### 1. Table Name
 **JavaInjectedThread**
@@ -2449,7 +2449,7 @@ event_simpleName=JavaInjectedThread ThreadStartBytes="*fc4883*"
 ```
 ---
 
-## Crowdstrike Table: Jpeg File Written Event
+## Crowdstrike Table: JpegFileWritten
 
 ### 1. Table Name
 **JpegFileWritten**
@@ -2492,7 +2492,7 @@ event_simpleName=JpegFileWritten ContextBaseFileName="*screenshot*"
 ```
 ---
 
-## Crowdstrike Table: Kernel Module Load Event
+## Crowdstrike Table: KernelModelLoadImage
 
 ### 1. Table Name
 **KernelModelLoadImage**
@@ -2549,7 +2549,7 @@ event_simpleName=KernelModelLoadImage ImageFileName="*\\evil_driver.sys"
 ```
 ---
 
-## Crowdstrike Table: Kernel Service Start Event
+## Crowdstrike Table: KernelServiceStarted
 
 ### 1. Table Name
 **KernelServiceStarted**
@@ -2601,7 +2601,7 @@ event_simpleName=KernelServiceStarted ServiceDisplayName="MySuspiciousDriver" | 
 ```
 ---
 
-## Crowdstrike Table: Lnk File Written Event
+## Crowdstrike Table: LnkFileWritten
 
 ### 1. Table Name
 **LnkFileWritten**
@@ -2658,7 +2658,7 @@ event_simpleName=LnkFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 ```
 ---
 
-## Crowdstrike Table: LSASS Handle from Unsigned Module Event
+## Crowdstrike Table: LsassHandleFromUnsignedModule
 
 ### 1. Table Name
 **LsassHandleFromUnsignedModule**
@@ -2709,7 +2709,7 @@ event_simpleName=LsassHandleFromUnsignedModule ImageFileName IN ("*\\Temp\\*", "
 ```
 ---
 
-## Crowdstrike Table: MSDocx File Written Event
+## Crowdstrike Table: MSDocxFileWritten
 
 ### 1. Table Name
 
@@ -2785,7 +2785,7 @@ event_simpleName=MSDocxFileWritten FsMagic=61267
 
 ---
 
-## Crowdstrike Table: MSPptx File Written Event
+## Crowdstrike Table: MSPptxFileWritten
 
 ### 1. Table Name
 
@@ -2861,7 +2861,7 @@ event_simpleName=MSPptxFileWritten FsMagic=61267
 
 ---
 
-## Crowdstrike Table: MSVsdx File Written Event
+## Crowdstrike Table: MSVsdxFileWritten
 
 ### 1. Table Name
 
@@ -2937,7 +2937,7 @@ event_simpleName=MSVsdxFileWritten FsMagic=61267
 
 ---
 
-## Crowdstrike Table: MSXlsx File Written Event
+## Crowdstrike Table: MSXlsxFileWritten
 
 ### 1. Table Name
 
@@ -3013,7 +3013,7 @@ event_simpleName=MSXlsxFileWritten FsMagic=61267
 
 ---
 
-## Crowdstrike Table: MachO File Written Event
+## Crowdstrike Table: MachOFileWritten
 
 ### 1. Table Name
 **MachOFileWritten**
@@ -3056,7 +3056,7 @@ event_simpleName=MachOFileWritten ContextBaseFileName="launcher"
 ```
 
 ---
-## Crowdstrike Table: Mbr Overwrite Raw Detect Info Event
+## Crowdstrike Table: MbrOverwriteRawDetectInfo
 
 ### 1. Table Name
 **MbrOverwriteRawDetectInfo**
@@ -3107,7 +3107,7 @@ event_simpleName=MbrOverwriteRawDetectInfo CommandLine="* -install*"
 ```
 
 ---
-## Crowdstrike Table: Memory Protection Updated Event
+## Crowdstrike Table: MemoryProtectionUpdated
 
 ### 1. Table Name
 **MemoryProtectionUpdated**
@@ -3150,7 +3150,7 @@ event_simpleName=MemoryProtectionUpdated Length=4096
 ```
 
 ---
-## Crowdstrike Table: Modify Service Binary Event
+## Crowdstrike Table: ModifyServiceBinary
 
 ### 1. Table Name
 **ModifyServiceBinary**
@@ -3199,7 +3199,7 @@ event_simpleName=ModifyServiceBinary ServiceImagePath="*\\Temp\\*"
 
 ---
 
-## Crowdstrike Table: Module Blocked Event
+## Crowdstrike Table: ModuleBlockedEvent
 
 ### 1. Table Name
 **ModuleBlockedEvent**
@@ -3251,7 +3251,7 @@ event_simpleName=ModuleBlockedEvent TargetFileName="*malicious_library.so"
 
 ---
 
-## Crowdstrike Table: Module Blocked Event With Pattern Id Event
+## Crowdstrike Table: ModuleBlockedEventWithPatternId
 
 ### 1. Table Name
 
@@ -3304,7 +3304,7 @@ event_simpleName=ModuleBlockedEventWithPatternId TargetFileName="*malicious_libr
 ```
 
 ---
-## Crowdstrike Table: Module Detect Info Event
+## Crowdstrike Table: ModuleDetectInfo
 
 ### 1. Table Name
 
@@ -3357,7 +3357,7 @@ event_simpleName=ModuleDetectInfo SHA256HashData="0xabcdef1234567890abcdef123456
 ```
 
 ---
-## Crowdstrike Table: Module Load V3 Detect Info Event
+## Crowdstrike Table: ModuleLoadV3DetectInfo
 
 ### 1. Table Name
 
@@ -3418,7 +3418,7 @@ event_simpleName=ModuleLoadV3DetectInfo SignInfoFlags=1
 
 ---
 
-## Crowdstrike Table: Motw Written Event
+## Crowdstrike Table: MotwWritten
 
 ### 1. Table Name
 
@@ -3477,7 +3477,7 @@ event_simpleName=MotwWritten TargetFileName="*invoice.zip"
 
 ---
 
-## Crowdstrike Table: Msi File Written Event
+## Crowdstrike Table: MsiFileWritten
 
 ### 1. Table Name
 
@@ -3538,7 +3538,7 @@ event_simpleName=MsiFileWritten ContextBaseFileName="update.msi"
 
 ---
 
-## Crowdstrike Table: Net Share Add Event
+## Crowdstrike Table: NetShareAdd
 
 ### 1. Table Name
 
@@ -3598,7 +3598,7 @@ event_simpleName=NetShareAdd RpcClientProcessId=5678
 ```
 
 ---
-## Crowdstrike Table: Network Connect IP4 Event
+## Crowdstrike Table: NetworkConnectIP4
 
 ### 1. Table Name
 
@@ -3659,7 +3659,7 @@ event_simpleName=NetworkConnectIP4 Protocol=17
 
 ---
 
-## Crowdstrike Table: Network Connect IP6 Event
+## Crowdstrike Table: NetworkConnectIP6
 
 ### 1. Table Name
 
@@ -3720,7 +3720,7 @@ event_simpleName=NetworkConnectIP6 Protocol=17
 
 ---
 
-## Crowdstrike Table: Network Listen IP4 Event
+## Crowdstrike Table: NetworkListenIP4
 
 ### 1. Table Name
 
@@ -3776,7 +3776,7 @@ event_simpleName=NetworkListenIP4 LocalAddressIP4="192.168.1.10" LocalPort=8080
 ```
 
 ---
-## Crowdstrike Table: Network Listen IP6 Event
+## Crowdstrike Table: NetworkListenIP6
 
 ### 1. Table Name
 
@@ -3833,7 +3833,7 @@ event_simpleName=NetworkListenIP6 LocalAddressIP6="fe80::abcd:ef12:3456:7890" Lo
 
 ---
 
-## Crowdstrike Table: Network Receive Accept IP4 Event
+## Crowdstrike Table: NetworkReceiveAcceptIP4
 
 ### 1. Table Name
 
@@ -3894,7 +3894,7 @@ event_simpleName=NetworkReceiveAcceptIP4 LocalAddressIP4="10.0.0.1" LocalPort=80
 
 ---
 
-## Crowdstrike Table: Network Receive Accept IP6 Event
+## Crowdstrike Table: NetworkReceiveAcceptIP6
 
 ### 1. Table Name
 
@@ -3955,7 +3955,7 @@ event_simpleName=NetworkReceiveAcceptIP6 LocalAddressIP6="fe80::abcd:ef12:3456:7
 
 ---
 
-## Crowdstrike Table: New Executable Renamed Event
+## Crowdstrike Table: NewExecutableRenamed
 
 ### 1. Table Name
 
@@ -4004,7 +4004,7 @@ event_simpleName=NewExecutableRenamed TargetFileName="*\\Users\\Public\\*"
 
 ---
 
-## Crowdstrike Table: New Executable Written Event
+## Crowdstrike Table: NewExecutableWritten
 
 ### 1. Table Name
 
@@ -4058,7 +4058,7 @@ event_simpleName=NewExecutableWritten ContextImageFileName="*\\AppData\\Local\\T
 
 ---
 
-## Crowdstrike Table: New Script Written Event
+## Crowdstrike Table: NewScriptWritten
 
 ### 1. Table Name
 
@@ -4112,7 +4112,7 @@ event_simpleName=NewScriptWritten ContextImageFileName="*\\Users\\Public\\*"
 
 ---
 
-## Crowdstrike Table: Ole File Written Event
+## Crowdstrike Table: OleFileWritten
 
 ### 1. Table Name
 
@@ -4168,7 +4168,7 @@ event_simpleName=OleFileWritten ContextBaseFileName="old_report.ppt"
 
 ---
 
-## Crowdstrike Table: Ooxml File Written Event
+## Crowdstrike Table: OoxmlFileWritten
 
 ### 1. Table Name
 
@@ -4224,7 +4224,7 @@ event_simpleName=OoxmlFileWritten ContextBaseFileName="presentation.pptx"
 
 ---
 
-## Crowdstrike Table: Packed Executable Written Event
+## Crowdstrike Table: PackedExecutableWritten
 
 ### 1. Table Name
 **PackedExecutableWritten**
@@ -4272,7 +4272,7 @@ event_simpleName=PackedExecutableWritten TargetFileName="*\\Downloads\\*"
 ```
 ---
 
-## Crowdstrike Table: Pdf File Written Event
+## Crowdstrike Table: PdfFileWritten
 
 ### 1. Table Name
 **PdfFileWritten**
@@ -4329,7 +4329,7 @@ event_simpleName=PdfFileWritten ContextBaseFileName="*invoice*.pdf" OR ContextBa
 ```
 ---
 
-## Crowdstrike Table: PE File Written Event
+## Crowdstrike Table: PeFileWritten
 
 ### 1. Table Name
 **PeFileWritten**
@@ -4394,7 +4394,7 @@ event_simpleName=PeFileWritten IsOnRemovableDisk=true
 ```
 ---
 
-## Crowdstrike Table: PE File Written Detection Event
+## Crowdstrike Table: PeFileWrittenDetectInfo
 
 ### 1. Table Name
 **PeFileWrittenDetectInfo**
@@ -4462,7 +4462,7 @@ event_simpleName=PeFileWrittenDetectInfo OriginalFilename="mimikatz.exe"
 ```
 ---
 
-## Crowdstrike Table: Png File Written Event
+## Crowdstrike Table: PngFileWritten
 
 ### 1. Table Name
 **PngFileWritten**
@@ -4518,7 +4518,7 @@ event_simpleName=PngFileWritten ContextBaseFileName="*screenshot*"
 ```
 ---
 
-## Crowdstrike Table: Privileged Process Handle from Unsigned Module Event
+## Crowdstrike Table: PrivilegedProcessHandleFromUnsignedModule
 
 ### 1. Table Name
 **PrivilegedProcessHandleFromUnsignedModule**
@@ -4568,7 +4568,7 @@ event_simpleName=PrivilegedProcessHandleFromUnsignedModule ImageFileName="*\\Tem
 ```
 ---
 
-## Crowdstrike Table: Packed Executable Execution Event
+## Crowdstrike Table: ProcessExecOnPackedExecutable
 
 ### 1. Table Name
 **ProcessExecOnPackedExecutable**
@@ -4609,7 +4609,7 @@ event_simpleName=ProcessExecOnPackedExecutable FileSubType IN (3, 5)
 ```
 ---
 
-## Crowdstrike Table: RDP File Execution Event
+## Crowdstrike Table: ProcessExecOnRDPFile
 
 ### 1. Table Name
 **ProcessExecOnRDPFile**
@@ -4649,7 +4649,7 @@ event_simpleName=ProcessExecOnRDPFile TargetProcessId="6212"
 ```
 ---
 
-## Crowdstrike Table: Remote Execution from SMB Share Event
+## Crowdstrike Table: ProcessExecOnSMBFile
 
 ### 1. Table Name
 **ProcessExecOnSMBFile**
@@ -4705,7 +4705,7 @@ event_simpleName=ProcessExecOnSMBFile LogonDomain="FINANCE"
 ```
 ---
 
-## Crowdstrike Table: Process Injection Event
+## Crowdstrike Table: ProcessInjection
 
 ### 1. Table Name
 **ProcessInjection**
@@ -4763,7 +4763,7 @@ event_simpleName=ProcessInjection TargetProcessId="1234"
 ```
 ---
 
-## Crowdstrike Table: ProcessRollup2 Event
+## Crowdstrike Table: ProcessRollup2
 
 ### 1. Table Name
 
@@ -4835,7 +4835,7 @@ event_simpleName=ProcessRollup2 TokenType=2
 ```
 
 ---
-## Crowdstrike Table: Process Self-Deletion Event
+## Crowdstrike Table: ProcessSelfDeleted
 
 ### 1. Table Name
 **ProcessSelfDeleted**
@@ -4885,7 +4885,7 @@ event_simpleName=ProcessSelfDeleted ImageFileName="*\\Temp\\*"
 event_simpleName=ProcessSelfDeleted | table SourceProcessId, TargetProcessId, ImageFileName
 ```
 ---
-## Crowdstrike Table: Python File Written Event
+## Crowdstrike Table: PythonFileWritten
 
 ### 1. Table Name
 **PythonFileWritten**
@@ -4942,7 +4942,7 @@ event_simpleName=PythonFileWritten TargetFileName="*\\Temp\\*.py"
 ```
 ---
 
-## Crowdstrike Table: File Quarantine Event
+## Crowdstrike Table: QuarantinedFile
 
 ### 1. Table Name
 **QuarantinedFile**
@@ -4990,7 +4990,7 @@ event_simpleName=QuarantinedFile ImageFileName="*\\Downloads\\*"
 ```
 ---
 
-## Crowdstrike Table: Quarantined File State Event
+## Crowdstrike Table: QuarantinedFileState
 
 ### 1. Table Name
 **QuarantinedFileState**
@@ -5046,7 +5046,7 @@ event_simpleName=QuarantinedFileState QuarantinedFileState=1 | table ImageFileNa
 ```
 ---
 
-## Crowdstrike Table: Ransomware File Creation Event
+## Crowdstrike Table: RansomwareCreateFile
 
 ### 1. Table Name
 **RansomwareCreateFile**
@@ -5095,7 +5095,7 @@ event_simpleName=RansomwareCreateFile ImageFileName="*\\cryptolocker.exe"
 event_simpleName=RansomwareCreateFile | table CommandLine, ImageFileName, TargetFileName
 ```
 ---
-## Crowdstrike Table: Ransomware File Access Pattern Event
+## Crowdstrike Table: RansomwareFileAccessPattern
 
 ### 1. Table Name
 **RansomwareFileAccessPattern**
@@ -5149,7 +5149,7 @@ event_simpleName=RansomwareFileAccessPattern | table CommandLine, ImageFileName,
 ```
 ---
 
-## Crowdstrike Table: Ransomware File Open Event
+## Crowdstrike Table: RansomwareOpenFile
 
 ### 1. Table Name
 **RansomwareOpenFile**
@@ -5191,7 +5191,7 @@ event_simpleName=RansomwareOpenFile TargetFileName="C:\\Users\\jsmith\\*"
 ```
 ---
 
-## Crowdstrike Table: Ransomware File Rename Event
+## Crowdstrike Table: RansomwareRenameFile
 
 ### 1. Table Name
 **RansomwareRenameFile**
@@ -5247,7 +5247,7 @@ event_simpleName=RansomwareRenameFile CommandLine="* -encrypt *"
 ```
 ---
 
-## Crowdstrike Table: Rar File Written Event
+## Crowdstrike Table: RarFileWritten
 
 ### 1. Table Name
 **RarFileWritten**
@@ -5305,7 +5305,7 @@ event_simpleName=RarFileWritten ContextBaseFileName="*backup*.rar"
 ```
 ---
 
-## Crowdstrike Table: Recently Modified File Execution Event
+## Crowdstrike Table: RecentlyModifiedFileExecutedInContainer
 
 ### 1. Table Name
 **RecentlyModifiedFileExecutedInContainer**
@@ -5363,7 +5363,7 @@ event_simpleName=RecentlyModifiedFileExecutedInContainer TargetFileName="*payloa
 ```
 ---
 
-## Crowdstrike Table: Reflective .NET Module Load Event
+## Crowdstrike Table: ReflectiveDotnetModuleLoad
 
 ### 1. Table Name
 **ReflectiveDotnetModuleLoad**
@@ -5421,7 +5421,7 @@ event_simpleName=ReflectiveDotnetModuleLoad CommandLine="*System.Reflection.Asse
 ```
 ---
 
-## Crowdstrike Table: Crowdstrike Registry Value Update Event
+## Crowdstrike Table: RegCrowdstrikeValueUpdate
 
 ### 1. Table Name
 **RegCrowdstrikeValueUpdate**
@@ -5472,7 +5472,7 @@ event_simpleName=RegCrowdstrikeValueUpdate RegStringValue="*disabled*"
 ```
 ---
 
-## Crowdstrike Table: Registry Value Update Event
+## Crowdstrike Table: RegGenericValueUpdate
 
 ### 1. Table Name
 **RegGenericValueUpdate**
@@ -5527,7 +5527,7 @@ event_simpleName=RegGenericValueUpdate RegOperationType=1
 ```
 ---
 
-## Crowdstrike Table: System Registry Modification Event
+## Crowdstrike Table: RegSystemConfigValueUpdate
 
 ### 1. Table Name
 **RegSystemConfigValueUpdate**
@@ -5582,7 +5582,7 @@ event_simpleName=RegSystemConfigValueUpdate RegOperationType=1
 ```
 ---
 
-## Crowdstrike Table: Registry Hive Written Event
+## Crowdstrike Table: RegistryHiveFileWritten
 
 ### 1. Table Name
 **RegistryHiveFileWritten**
@@ -5631,7 +5631,7 @@ event_simpleName=RegistryHiveFileWritten ContextBaseFileName="SECURITY"
 ```
 ---
 
-## Crowdstrike Table: Rpm File Written Event
+## Crowdstrike Table: RpmFileWritten
 
 ### 1. Table Name
 **RpmFileWritten**
@@ -5676,7 +5676,7 @@ event_simpleName=RpmFileWritten ContextBaseFileName="*payload*.rpm"
 ```
 ---
 
-## Crowdstrike Table: Rtf File Written Event
+## Crowdstrike Table: RtfFileWritten
 
 ### 1. Table Name
 **RtfFileWritten**
@@ -5732,7 +5732,7 @@ event_simpleName=RtfFileWritten ContextBaseFileName="*invoice*.rtf" TargetFileNa
 ```
 ---
 
-## Crowdstrike Table: Scheduled Task Modification Event
+## Crowdstrike Table: ScheduledTaskModified
 
 ### 1. Table Name
 **ScheduledTaskModified**
@@ -5789,7 +5789,7 @@ event_simpleName=ScheduledTaskModified TaskXml="*Invoke-Expression*" OR TaskXml=
 ```
 ---
 
-## Crowdstrike Table: Scheduled Task Registration Event
+## Crowdstrike Table: ScheduledTaskRegistered
 
 ### 1. Table Name
 **ScheduledTaskRegistered**
@@ -5847,7 +5847,7 @@ event_simpleName=ScheduledTaskRegistered TaskXml="*<UserId>S-1-5-18</UserId>*"
 ```
 ---
 
-## Crowdstrike Table: Screenshot Taken Event
+## Crowdstrike Table: ScreenshotTakenEtw
 
 ### 1. Table Name
 **ScreenshotTakenEtw**
@@ -5898,7 +5898,7 @@ event_simpleName=ScreenshotTakenEtw ImageFileName!="C:\\Windows\\System32\\Snipp
 ```
 ---
 
-## Crowdstrike Table: Script Execution Blocked Event
+## Crowdstrike Table: ScriptControlBlocked
 
 ### 1. Table Name
 **ScriptControlBlocked**
@@ -5953,7 +5953,7 @@ event_simpleName=ScriptControlBlocked ScriptContent="*DownloadString*" OR Script
 event_simpleName=ScriptControlBlocked ScriptingLanguageId IN (4, 5)
 ```
 ---
-## Crowdstrike Table: Malicious Script Execution Event
+## Crowdstrike Table: ScriptControlDetectInfo
 
 ### 1. Table Name
 **ScriptControlDetectInfo**
@@ -6014,7 +6014,7 @@ event_simpleName=ScriptControlDetectInfo ScriptingLanguageId IN (4, 5)
 // Find malicious scripts spawned by Microsoft Office applications
 event_simpleName=ScriptControlDetectInfo ParentImageFileName IN ("*\\winword.exe", "*\\excel.exe", "*\\powerpnt.exe")
 ```
-## Crowdstrike Table: Script Content Event
+## Crowdstrike Table: ScriptControlScanInfo
 
 ### 1. Table Name
 **ScriptControlScanInfo**
@@ -6062,7 +6062,7 @@ event_simpleName=ScriptControlScanInfo ScriptContentSource=2
 event_simpleName=ScriptControlScanInfo ScriptContentName="*malicious.ps1"
 ```
 ---
-## Crowdstrike Table: Script Execution Event
+## Crowdstrike Table: ScriptControlScanTelemetry
 
 ### 1. Table Name
 **ScriptControlScanTelemetry**
@@ -6128,7 +6128,7 @@ event_simpleName=ScriptControlScanTelemetry ScriptContentSource=2
 event_simpleName=ScriptControlScanTelemetry ScriptingLanguageId IN (2, 3)
 ```
 ---
-## Crowdstrike Table: Script File Content Event
+## Crowdstrike Table: ScriptFileWrittenInfo
 
 ### 1. Table Name
 **ScriptFileWrittenInfo**
@@ -6180,7 +6180,7 @@ event_simpleName=ScriptFileWrittenInfo ScriptContent="*DownloadString*" OR Scrip
 event_simpleName=ScriptFileWrittenInfo TargetFileName="*.vbs" ScriptContent="*CreateObject*"
 ```
 ---
-## Crowdstrike Table: WMI Query Event
+## Crowdstrike Table: SensitiveWmiQuery
 
 ### 1. Table Name
 **SensitiveWmiQuery**
@@ -6233,7 +6233,7 @@ event_simpleName=SensitiveWmiQuery WmiQuery="*Win32_Process*"
 event_simpleName=SensitiveWmiQuery UserName="*svc_account*"
 ```
 ---
-## Crowdstrike Table: Service Start Event
+## Crowdstrike Table: ServiceStarted
 
 ### 1. Table Name
 **ServiceStarted**
@@ -6289,7 +6289,7 @@ event_simpleName=ServiceStarted CommandLine="*powershell.exe*"
 event_simpleName=ServiceStarted ServiceDisplayName="SuspiciousSvc" | table RpcClientProcessId
 ```
 ---
-## Crowdstrike Table: 7Zip File Written Event
+## Crowdstrike Table: SevenZipFileWritten
 
 ### 1. Table Name
 **SevenZipFileWritten**
@@ -6345,7 +6345,7 @@ event_simpleName=SevenZipFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=SevenZipFileWritten ContextBaseFileName="*secret*.7z"
 ```
 ---
-## Crowdstrike Table: SMTP Command Event
+## Crowdstrike Table: SmtpCommand
 
 ### 1. Table Name
 **SmtpCommand**
@@ -6402,7 +6402,7 @@ event_simpleName=SmtpCommand ImageFileName!="/usr/sbin/sendmail" ImageFileName!=
 event_simpleName=SmtpCommand CommandArg1="*<suspicious-sender@domain.com>*"
 ```
 ---
-## Crowdstrike Table: Symbolic Link Creation Event
+## Crowdstrike Table: SuspiciousCreateSymbolicLink
 
 ### 1. Table Name
 **SuspiciousCreateSymbolicLink**
@@ -6449,7 +6449,7 @@ event_simpleName=SuspiciousCreateSymbolicLink SymbolicLinkTarget="*\\System32\\*
 event_simpleName=SuspiciousCreateSymbolicLink CommandLine="*mklink*"
 ```
 ---
-## Crowdstrike Table: Suspicious DNS Request Event
+## Crowdstrike Table: SuspiciousDnsRequest
 
 ### 1. Table Name
 **SuspiciousDnsRequest**
@@ -6495,7 +6495,7 @@ event_simpleName=SuspiciousDnsRequest RequestType=16
 event_simpleName=SuspiciousDnsRequest RequestType=1
 ```
 ---
-## Crowdstrike Table: Credential File Copy Event
+## Crowdstrike Table: SuspiciousEseFileWritten
 
 ### 1. Table Name
 **SuspiciousEseFileWritten**
@@ -6539,7 +6539,7 @@ event_simpleName=SuspiciousEseFileWritten SourceFileName="*\\ntds.dit"
 event_simpleName=SuspiciousEseFileWritten TargetFileName!="*\\ntds.dit"
 ```
 ---
-## Crowdstrike Table: Privileged Process Handle Event
+## Crowdstrike Table: SuspiciousPrivilegedProcessHandle
 
 ### 1. Table Name
 **SuspiciousPrivilegedProcessHandle**
@@ -6583,7 +6583,7 @@ event_simpleName=SuspiciousPrivilegedProcessHandle TargetProcessId="684"
 event_simpleName=SuspiciousPrivilegedProcessHandle SuspiciousHandleOpenReason=2
 ```
 ---
-## Crowdstrike Table: Registry Persistence Event
+## Crowdstrike Table: SuspiciousRegAsepUpdate
 
 ### 1. Table Name
 **SuspiciousRegAsepUpdate**
@@ -6648,7 +6648,7 @@ event_simpleName=SuspiciousRegAsepUpdate TargetFileName="*\\evil.exe"
 event_simpleName=SuspiciousRegAsepUpdate RegStringValue="*.js" OR RegStringValue="*.vbs" OR RegStringValue="*.ps1"
 ```
 ---
-## Crowdstrike Table: Tar File Written Event
+## Crowdstrike Table: TarFileWritten
 
 ### 1. Table Name
 **TarFileWritten**
@@ -6702,7 +6702,7 @@ event_simpleName=TarFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=TarFileWritten ContextBaseFileName="*backup*.tar"
 ```
 ---
-## Crowdstrike Table: Tiff File Written Event
+## Crowdstrike Table: TiffFileWritten
 
 ### 1. Table Name
 **TiffFileWritten**
@@ -6756,7 +6756,7 @@ event_simpleName=TiffFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=TiffFileWritten ContextBaseFileName="secret_scan.tif"
 ```
 ---
-## Crowdstrike Table: Token Impersonation Event
+## Crowdstrike Table: TokenImpersonated
 
 ### 1. Table Name
 **TokenImpersonated**
@@ -6803,7 +6803,7 @@ event_simpleName=TokenImpersonated ImpersonatedUserName="*SYSTEM"
 event_simpleName=TokenImpersonated OriginalUserSid="S-1-5-21-1234567890-123456789-1234567890-500"
 ```
 ---
-## Crowdstrike Table: Unsigned Module Load Event
+## Crowdstrike Table: UnsignedModuleLoad
 
 ### 1. Table Name
 **UnsignedModuleLoad**
@@ -6855,7 +6855,7 @@ event_simpleName=UnsignedModuleLoad SHA256HashData="a1b2c3d4e5f6a1b2c3d4e5f6a1b2
 event_simpleName=UnsignedModuleLoad MappedFromUserMode=1
 ```
 ---
-## Crowdstrike Table: User Account Creation Event
+## Crowdstrike Table: UserAccountCreated
 
 ### 1. Table Name
 **UserAccountCreated**
@@ -6899,7 +6899,7 @@ event_simpleName=UserAccountCreated UserName="BackupSvc"
 event_simpleName=UserAccountCreated RpcClientProcessId="1337"
 ```
 ---
-## Crowdstrike Table: User Account Deletion Event
+## Crowdstrike Table: UserAccountDeleted
 
 ### 1. Table Name
 **UserAccountDeleted**
@@ -6941,7 +6941,7 @@ event_simpleName=UserAccountDeleted UserName="service-acct"
 event_simpleName=UserAccountDeleted RpcClientProcessId="1337"
 ```
 ---
-## Crowdstrike Table: User Logon Event
+## Crowdstrike Table: UserLogon
 
 ### 1. Table Name
 **UserLogon**
@@ -7000,7 +7000,7 @@ event_simpleName=UserLogon UserIsAdmin=true
 event_simpleName=UserLogon LogonServer="DC02"
 ```
 ---
-## Crowdstrike Table: User Logon Failed Event
+## Crowdstrike Table: UserLogonFailed
 
 ### 1. Table Name
 **UserLogonFailed**
@@ -7045,7 +7045,7 @@ event_simpleName=UserLogonFailed UserSid="S-1-5-21-*"
 event_simpleName=UserLogonFailed UserLogonFlags=2
 ```
 ---
-## Crowdstrike Table: User Logon Failed Event
+## Crowdstrike Table: UserLogonFailed2
 
 ### 1. Table Name
 **UserLogonFailed2**
@@ -7096,7 +7096,7 @@ event_simpleName=UserLogonFailed2 ClientComputerName="SUSPICIOUS-ENDPOINT"
 event_simpleName=UserLogonFailed2 LogonDomain="CORPORATE"
 ```
 ---
-## Crowdstrike Table: Vmdk File Written Event
+## Crowdstrike Table: VmdkFileWritten
 
 ### 1. Table Name
 **VmdkFileWritten**
@@ -7154,7 +7154,7 @@ event_simpleName=VmdkFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=VmdkFileWritten a.TemporaryFileName!=""
 ```
 ---
-## Crowdstrike Table: Web Script File Written Event
+## Crowdstrike Table: WebScriptFileWritten
 
 ### 1. Table Name
 **WebScriptFileWritten**
@@ -7210,7 +7210,7 @@ event_simpleName=WebScriptFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=WebScriptFileWritten ContextBaseFileName="payload.vbs"
 ```
 ---
-## Crowdstrike Table: WMI Process Creation Event
+## Crowdstrike Table: WmiCreateProcess
 
 ### 1. Table Name
 **WmiCreateProcess**
@@ -7263,7 +7263,7 @@ event_simpleName=WmiCreateProcess UserName="*Admin*"
 event_simpleName=WmiCreateProcess RpcClientProcessId="1234"
 ```
 ---
-## Crowdstrike Table: Xar File Written Event
+## Crowdstrike Table: XarFileWritten
 
 ### 1. Table Name
 **XarFileWritten**
@@ -7319,7 +7319,7 @@ event_simpleName=XarFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=XarFileWritten ContextBaseFileName="important_package.xar"
 ```
 ---
-## Crowdstrike Table: Zip File Written Event
+## Crowdstrike Table: ZipFileWritten
 
 ### 1. Table Name
 **ZipFileWritten**
@@ -7375,7 +7375,7 @@ event_simpleName=ZipFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=ZipFileWritten ContextBaseFileName="backup.zip"
 ```
 ---
-## Crowdstrike Table: User Account Creation Event
+## Crowdstrike Table: UserAccountCreated
 
 ### 1. Table Name
 **UserAccountCreated**
@@ -7419,7 +7419,7 @@ event_simpleName=UserAccountCreated UserName="BackupSvc"
 event_simpleName=UserAccountCreated RpcClientProcessId="1337"
 ```
 ---
-## Crowdstrike Table: User Account Deletion Event
+## Crowdstrike Table: UserAccountDeleted
 
 ### 1. Table Name
 **UserAccountDeleted**
