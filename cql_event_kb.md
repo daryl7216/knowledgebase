@@ -54,7 +54,7 @@ event_simpleName=ArcFileWritten ContextBaseFileName="archive.rar"
 ```
 
 ---
-|## ArjFileWritten Table: File Written Event
+## ArjFileWritten Table: File Written Event
 
 ### 1. Table Name
 **ArjFileWritten**
