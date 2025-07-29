@@ -1330,7 +1330,8 @@ event_simpleName=DnsRequest IP4Records="*198.51.100.55*"
 // Look for A record requests (RequestType=1) and show the first IP address returned
 event_simpleName=DnsRequest RequestType=1 | table DomainName, FirstIP4Record
 ```
----## DriverLoad Table: Driver Load Event
+---
+## DriverLoad Table: Driver Load Event
 
 ### 1. Table Name
 **DriverLoad**
@@ -1476,7 +1477,8 @@ event_simpleName=DriverLoadedV2DetectInfo DriverImageFileName="C:\\Windows\\Syst
 // Find driver loaded events where the image filename is svchost.exe
 event_simpleName=DriverLoadedV2DetectInfo ImageFileName="C:\\Windows\\System32\\svchost.exe"
 ```
----## ELFFileWritten Table: ELF File Written Event
+---
+## ELFFileWritten Table: ELF File Written Event
 
 ### 1. Table Name
 **ELFFileWritten**
@@ -1516,7 +1518,8 @@ event_simpleName=ELFFileWritten TargetFileName="/var/opt/new_app/*"
 // Identify recently written ELF executables by file name patterns
 event_simpleName=ELFFileWritten TargetFileName="*.elf" OR TargetFileName="*.so" OR TargetFileName="*.bin"
 ```
----## EmailFileWritten Table: Email File Written Event
+---
+## EmailFileWritten Table: Email File Written Event
 
 ### 1. Table Name
 **EmailFileWritten**
@@ -1556,7 +1559,8 @@ event_simpleName=EmailFileWritten TargetFileName="*\\Temp\\*.eml*"
 // Identify recently written email files by common extensions
 event_simpleName=EmailFileWritten TargetFileName="*.eml" OR TargetFileName="*.msg" OR TargetFileName="*.pst"
 ```
----## EseFileWritten Table: ESE File Written Event
+---
+## EseFileWritten Table: ESE File Written Event
 
 ### 1. Table Name
 **EseFileWritten**
@@ -1609,7 +1613,8 @@ event_simpleName=EseFileWritten TargetFileName="*temp_database.edb*"
 // Find ESE files based on their context base file name
 event_simpleName=EseFileWritten ContextBaseFileName="app_data.jrs"
 ```
----## EventLogCleared Table: Event Log Cleared Event
+---
+## EventLogCleared Table: Event Log Cleared Event
 
 ### 1. Table Name
 **EventLogCleared**
@@ -1655,7 +1660,8 @@ event_simpleName=EventLogCleared UserName="*Administrator*"
 // Find event log cleared events by a specific RPC client process ID
 event_simpleName=EventLogCleared RpcClientProcessId="4"
 ```
----## ExecutableDeleted Table: Executable Deleted Event
+---
+## ExecutableDeleted Table: Executable Deleted Event
 
 ### 1. Table Name
 **ExecutableDeleted**
@@ -1695,7 +1701,8 @@ event_simpleName=ExecutableDeleted TargetFileName="*temp_tool.exe*"
 // Identify recently deleted executables with common suspicious names
 event_simpleName=ExecutableDeleted TargetFileName="*powershell.exe*" OR TargetFileName="*mimikatz.exe*"
 ```
----## FileCreateInfo Table: File Creation Event
+---
+## FileCreateInfo Table: File Creation Event
 
 ### 1. Table Name
 **FileCreateInfo**
@@ -1736,7 +1743,8 @@ event_simpleName=FileCreateInfo UID="1001"
 // Identify recently created files in a suspicious directory by a specific UID
 event_simpleName=FileCreateInfo TargetFileName="/tmp/*" UID="0"
 ```
----## FileRenameInfo Table: File Rename Event
+---
+## FileRenameInfo Table: File Rename Event
 
 ### 1. Table Name
 **FileRenameInfo**
@@ -1781,7 +1789,8 @@ event_simpleName=FileRenameInfo TargetFileName="*.exe" SourceFileName!="*.exe"
 // Investigate file renames where the original file was in a sensitive directory
 event_simpleName=FileRenameInfo SourceFileName="*C:\\Windows\\System32\\*"
 ```
----## FirewallDeleteRule Table: Firewall Rule Deletion Event
+---
+## FirewallDeleteRule Table: Firewall Rule Deletion Event
 
 ### 1. Table Name
 **FirewallDeleteRule**
@@ -1836,7 +1845,8 @@ event_simpleName=FirewallDeleteRule UserName="Administrator"
 // Find firewall rule deletion events requested by a specific RPC client process ID
 event_simpleName=FirewallDeleteRule RpcClientProcessId=1234
 ```
----## FirewallSetRule Table: Firewall Rule Set Event
+---
+## FirewallSetRule Table: Firewall Rule Set Event
 
 ### 1. Table Name
 **FirewallSetRule**
@@ -1881,7 +1891,8 @@ event_simpleName=FirewallSetRule UserName="*Administrator*"
 // Find firewall rule set events initiated by a suspicious RPC client process ID
 event_simpleName=FirewallSetRule RpcClientProcessId="1234"
 ```
----## GenericFileWritten Table: Generic File Written Event
+---
+## GenericFileWritten Table: Generic File Written Event
 
 ### 1. Table Name
 **GenericFileWritten**
@@ -1937,7 +1948,8 @@ event_simpleName=GenericFileWritten IsOnNetwork=true
 // Find generic file writes by a specific file operator SID (Windows only)
 event_simpleName=GenericFileWritten FileOperatorSid="S-1-5-18"
 ```
----## GifFileWritten Table: GIF File Written Event
+---
+## GifFileWritten Table: GIF File Written Event
 
 ### 1. Table Name
 **GifFileWritten**
@@ -1991,7 +2003,8 @@ event_simpleName=GifFileWritten TargetFileName="*thumbnail*.gif"
 // Find GIF files based on their context base file name
 event_simpleName=GifFileWritten ContextBaseFileName="loading_spinner.gif"
 ```
----## GzipFileWritten Table: Gzip File Written Event
+---
+## GzipFileWritten Table: Gzip File Written Event
 
 ### 1. Table Name
 **GzipFileWritten**
@@ -2031,7 +2044,8 @@ event_simpleName=GzipFileWritten TargetFileName="*\\temp\\*.gz"
 // Identify recently written Gzip archives
 event_simpleName=GzipFileWritten TargetFileName="*.gz"
 ```
----## HostedServiceStarted Table: Hosted Service Start Event
+---
+## HostedServiceStarted Table: Hosted Service Start Event
 
 ### 1. Table Name
 **HostedServiceStarted**
@@ -2080,7 +2094,8 @@ event_simpleName=HostedServiceStarted ServiceDisplayName IN ("*malware*", "*back
 // Investigate which process is responsible for starting a specific service
 event_simpleName=HostedServiceStarted ServiceDisplayName="SuspiciousSvc" | table RpcClientProcessId, ImageFileName
 ```
----## HttpRequest Table: HTTP Request Event
+---
+## HttpRequest Table: HTTP Request Event
 
 ### 1. Table Name
 **HttpRequest**
@@ -2138,7 +2153,8 @@ event_simpleName=HttpRequest HttpPath="*exfil*" OR CommandLine="*upload_data*"
 // Discover HTTP requests where HttpHost contains an unusual domain pattern
 event_simpleName=HttpRequest HttpHost="*.xyz" OR HttpHost="*.top"
 ```
----## ImgExtensionFileWritten Table: File Written Event
+---
+## ImgExtensionFileWritten Table: File Written Event
 
 ### 1. Table Name
 **ImgExtensionFileWritten**
@@ -2227,7 +2243,8 @@ event_simpleName=InjectedThreadFromUnsignedModule InjectedThreadFlag=512
 // Investigate which modules in the target process are associated with the injected thread
 event_simpleName=InjectedThreadFromUnsignedModule | table TargetProcessId, TargetThreadModule
 ```
----## IsoExtensionFileWritten Table: File Written Event
+---
+## IsoExtensionFileWritten Table: File Written Event
 
 ### 1. Table Name
 **IsoExtensionFileWritten**
@@ -2268,7 +2285,8 @@ event_simpleName=IsoExtensionFileWritten TargetFileName IN ("*\\Downloads\\*", "
 // Find ISO files with potentially suspicious names
 event_simpleName=IsoExtensionFileWritten ContextBaseFileName IN ("*invoice*", "*urgent*", "*payment*")
 ```
----## JarFileWritten Table: File Written Event
+---
+## JarFileWritten Table: File Written Event
 
 ### 1. Table Name
 **JarFileWritten**
@@ -2310,7 +2328,8 @@ event_simpleName=JarFileWritten TargetFileName IN ("*\\Temp\\*", "*\\Users\\Publ
 // Find JAR files with names that could indicate an exploit, such as for Log4j
 event_simpleName=JarFileWritten ContextBaseFileName="*log4j*" OR ContextBaseFileName="*exploit*"
 ```
----## JavaClassFileWritten Table: File Written Event
+---
+## JavaClassFileWritten Table: File Written Event
 
 ### 1. Table Name
 **JavaClassFileWritten**
@@ -2404,7 +2423,8 @@ event_simpleName=JavaInjectedThread InjectedThreadFlag=512
 // Investigate the initial bytes of an injected thread for known malicious shellcode patterns
 event_simpleName=JavaInjectedThread ThreadStartBytes="*fc4883*"
 ```
----## JpegFileWritten Table: File Written Event
+---
+## JpegFileWritten Table: File Written Event
 
 ### 1. Table Name
 **JpegFileWritten**
@@ -2445,7 +2465,8 @@ event_simpleName=JpegFileWritten TargetFileName IN ("*\\Temp\\*", "*\\Downloads\
 // Find JPEG files that might be screenshots
 event_simpleName=JpegFileWritten ContextBaseFileName="*screenshot*"
 ```
----## KernelModelLoadImage Table: Kernel Module Load Event
+---
+## KernelModelLoadImage Table: Kernel Module Load Event
 
 ### 1. Table Name
 **KernelModelLoadImage**
@@ -2500,7 +2521,8 @@ event_simpleName=KernelModelLoadImage ImageModuleDescription="*bypass*" OR Image
 // Investigate a specific driver being loaded
 event_simpleName=KernelModelLoadImage ImageFileName="*\\evil_driver.sys"
 ```
----## KernelServiceStarted Table: Kernel Service Start Event
+---
+## KernelServiceStarted Table: Kernel Service Start Event
 
 ### 1. Table Name
 **KernelServiceStarted**
@@ -2550,7 +2572,8 @@ event_simpleName=KernelServiceStarted ServiceDisplayName="*rootkit*" OR ServiceD
 // Investigate which process is responsible for starting a specific kernel service
 event_simpleName=KernelServiceStarted ServiceDisplayName="MySuspiciousDriver" | table RpcClientProcessId, ImageFileName
 ```
----## LnkFileWritten Table: File Written Event
+---
+## LnkFileWritten Table: File Written Event
 
 ### 1. Table Name
 **LnkFileWritten**
@@ -2605,7 +2628,8 @@ event_simpleName=LnkFileWritten IsOnRemovableDisk=true
 // Investigate LNK file writes by a specific file operator SID (Windows only)
 event_simpleName=LnkFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 ```
----## LsassHandleFromUnsignedModule Table: LSASS Handle from Unsigned Module Event
+---
+## LsassHandleFromUnsignedModule Table: LSASS Handle from Unsigned Module Event
 
 ### 1. Table Name
 **LsassHandleFromUnsignedModule**
@@ -2654,7 +2678,8 @@ event_simpleName=LsassHandleFromUnsignedModule SignInfoFlags=512
 // Investigate unsigned modules from temporary directories that are accessing LSASS
 event_simpleName=LsassHandleFromUnsignedModule ImageFileName IN ("*\\Temp\\*", "*\\Users\\Public\\*")
 ```
----## Crowdstrike Table: MSDocxFileWritten
+---
+## Crowdstrike Table: MSDocxFileWritten
 
 ### 1. Table Name
 
@@ -2728,7 +2753,8 @@ event_simpleName=MSDocxFileWritten FileCategory=2
 event_simpleName=MSDocxFileWritten FsMagic=61267
 ```
 
----## Crowdstrike Table: MSPptxFileWritten
+---
+## Crowdstrike Table: MSPptxFileWritten
 
 ### 1. Table Name
 
@@ -2802,7 +2828,8 @@ event_simpleName=MSPptxFileWritten FileCategory=2
 event_simpleName=MSPptxFileWritten FsMagic=61267
 ```
 
----## Crowdstrike Table: MSVsdxFileWritten
+---
+## Crowdstrike Table: MSVsdxFileWritten
 
 ### 1. Table Name
 
@@ -2876,7 +2903,8 @@ event_simpleName=MSVsdxFileWritten FileCategory=2
 event_simpleName=MSVsdxFileWritten FsMagic=61267
 ```
 
----## Crowdstrike Table: MSXlsxFileWritten
+---
+## Crowdstrike Table: MSXlsxFileWritten
 
 ### 1. Table Name
 
@@ -2950,7 +2978,8 @@ event_simpleName=MSXlsxFileWritten FileCategory=2
 event_simpleName=MSXlsxFileWritten FsMagic=61267
 ```
 
----## Crowdstrike Table: MachOFileWritten
+---
+## Crowdstrike Table: MachOFileWritten
 
 ### 1. Table Name
 **MachOFileWritten**
@@ -3186,7 +3215,8 @@ event_simpleName=ModuleBlockedEvent SHA256HashData="0x03312a19baa7ab137c09127c6f
 event_simpleName=ModuleBlockedEvent TargetFileName="*malicious_library.so"
 ```
 
----## Crowdstrike Table: ModuleBlockedEventWithPatternId
+---
+## Crowdstrike Table: ModuleBlockedEventWithPatternId
 
 ### 1. Table Name
 
@@ -3291,7 +3321,8 @@ event_simpleName=ModuleDetectInfo TargetFileName="*suspicious_module.so"
 event_simpleName=ModuleDetectInfo SHA256HashData="0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
 ```
 
----## Crowdstrike Table: ModuleLoadV3DetectInfo
+---
+## Crowdstrike Table: ModuleLoadV3DetectInfo
 
 ### 1. Table Name
 
@@ -3350,7 +3381,8 @@ event_simpleName=ModuleLoadV3DetectInfo SHA256HashData="0x1234567890abcdef123456
 event_simpleName=ModuleLoadV3DetectInfo SignInfoFlags=1
 ```
 
----## Crowdstrike Table: MotwWritten
+---
+## Crowdstrike Table: MotwWritten
 
 ### 1. Table Name
 
@@ -3407,7 +3439,8 @@ event_simpleName=MotwWritten ZoneIdentifier=3
 event_simpleName=MotwWritten TargetFileName="*invoice.zip"
 ```
 
----## Crowdstrike Table: MsiFileWritten
+---
+## Crowdstrike Table: MsiFileWritten
 
 ### 1. Table Name
 
@@ -3466,7 +3499,8 @@ event_simpleName=MsiFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 event_simpleName=MsiFileWritten ContextBaseFileName="update.msi"
 ```
 
----## Crowdstrike Table: NetShareAdd
+---
+## Crowdstrike Table: NetShareAdd
 
 ### 1. Table Name
 
@@ -3585,7 +3619,8 @@ event_simpleName=NetworkConnectIP4 LocalAddressIP4="10.0.0.10" LocalPort=12345
 event_simpleName=NetworkConnectIP4 Protocol=17
 ```
 
----## Crowdstrike Table: NetworkConnectIP6
+---
+## Crowdstrike Table: NetworkConnectIP6
 
 ### 1. Table Name
 
@@ -3644,7 +3679,8 @@ event_simpleName=NetworkConnectIP6 LocalAddressIP6="fe80::abcd:ef12:3456:7890" L
 event_simpleName=NetworkConnectIP6 Protocol=17
 ```
 
----## Crowdstrike Table: NetworkListenIP4
+---
+## Crowdstrike Table: NetworkListenIP4
 
 ### 1. Table Name
 
@@ -3755,7 +3791,8 @@ event_simpleName=NetworkListenIP6 Protocol=17
 event_simpleName=NetworkListenIP6 LocalAddressIP6="fe80::abcd:ef12:3456:7890" LocalPort=8443
 ```
 
----## Crowdstrike Table: NetworkReceiveAcceptIP4
+---
+## Crowdstrike Table: NetworkReceiveAcceptIP4
 
 ### 1. Table Name
 
@@ -3814,7 +3851,8 @@ event_simpleName=NetworkReceiveAcceptIP4 Protocol=17
 event_simpleName=NetworkReceiveAcceptIP4 LocalAddressIP4="10.0.0.1" LocalPort=80
 ```
 
----## Crowdstrike Table: NetworkReceiveAcceptIP6
+---
+## Crowdstrike Table: NetworkReceiveAcceptIP6
 
 ### 1. Table Name
 
@@ -3873,7 +3911,8 @@ event_simpleName=NetworkReceiveAcceptIP6 Protocol=17
 event_simpleName=NetworkReceiveAcceptIP6 LocalAddressIP6="fe80::abcd:ef12:3456:7890" LocalPort=80
 ```
 
----## Crowdstrike Table: NewExecutableRenamed
+---
+## Crowdstrike Table: NewExecutableRenamed
 
 ### 1. Table Name
 
@@ -3920,7 +3959,8 @@ event_simpleName=NewExecutableRenamed SourceFileName="*powershell.exe"
 event_simpleName=NewExecutableRenamed TargetFileName="*\\Users\\Public\\*"
 ```
 
----## Crowdstrike Table: NewExecutableWritten
+---
+## Crowdstrike Table: NewExecutableWritten
 
 ### 1. Table Name
 
@@ -3972,7 +4012,8 @@ event_simpleName=NewExecutableWritten ContextBaseFileName="installer.exe"
 event_simpleName=NewExecutableWritten ContextImageFileName="*\\AppData\\Local\\Temp\\*"
 ```
 
----## Crowdstrike Table: NewScriptWritten
+---
+## Crowdstrike Table: NewScriptWritten
 
 ### 1. Table Name
 
@@ -4024,7 +4065,8 @@ event_simpleName=NewScriptWritten ContextBaseFileName="payload.js"
 event_simpleName=NewScriptWritten ContextImageFileName="*\\Users\\Public\\*"
 ```
 
----## Crowdstrike Table: OleFileWritten
+---
+## Crowdstrike Table: OleFileWritten
 
 ### 1. Table Name
 
@@ -4078,7 +4120,8 @@ event_simpleName=OleFileWritten IsOnRemovableDisk=true
 event_simpleName=OleFileWritten ContextBaseFileName="old_report.ppt"
 ```
 
----## Crowdstrike Table: OoxmlFileWritten
+---
+## Crowdstrike Table: OoxmlFileWritten
 
 ### 1. Table Name
 
@@ -4132,7 +4175,8 @@ event_simpleName=OoxmlFileWritten IsOnRemovableDisk=true
 event_simpleName=OoxmlFileWritten ContextBaseFileName="presentation.pptx"
 ```
 
----## PackedExecutableWritten Table: Packed Executable Written Event
+---
+## PackedExecutableWritten Table: Packed Executable Written Event
 
 ### 1. Table Name
 **PackedExecutableWritten**
@@ -4178,7 +4222,8 @@ event_simpleName=PackedExecutableWritten FileSubType IN (3, 5)
 // Find packed executables written to a specific directory
 event_simpleName=PackedExecutableWritten TargetFileName="*\\Downloads\\*"
 ```
----## PdfFileWritten Table: File Written Event
+---
+## PdfFileWritten Table: File Written Event
 
 ### 1. Table Name
 **PdfFileWritten**
@@ -4233,7 +4278,8 @@ event_simpleName=PdfFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find PDF files with a potentially suspicious name like "invoice" or "password"
 event_simpleName=PdfFileWritten ContextBaseFileName="*invoice*.pdf" OR ContextBaseFileName="*password*.pdf"
 ```
----## PeFileWritten Table: PE File Written Event
+---
+## PeFileWritten Table: PE File Written Event
 
 ### 1. Table Name
 **PeFileWritten**
@@ -4296,7 +4342,8 @@ event_simpleName=PeFileWritten ModuleCharacteristics=8192
 // Find PE files written to a removable disk, which might be used for data transfer or offline attacks
 event_simpleName=PeFileWritten IsOnRemovableDisk=true
 ```
----## PeFileWrittenDetectInfo Table: PE File Written Detection Event
+---
+## PeFileWrittenDetectInfo Table: PE File Written Detection Event
 
 ### 1. Table Name
 **PeFileWrittenDetectInfo**
@@ -4415,7 +4462,8 @@ event_simpleName=PngFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Hunt for screenshot-related PNG files being created
 event_simpleName=PngFileWritten ContextBaseFileName="*screenshot*"
 ```
----## PrivilegedProcessHandleFromUnsignedModule Table: Privileged Process Handle from Unsigned Module Event
+---
+## PrivilegedProcessHandleFromUnsignedModule Table: Privileged Process Handle from Unsigned Module Event
 
 ### 1. Table Name
 **PrivilegedProcessHandleFromUnsignedModule**
@@ -4463,7 +4511,8 @@ event_simpleName=PrivilegedProcessHandleFromUnsignedModule SignInfoFlags=512
 // Investigate unsigned modules creating handles from a temp directory
 event_simpleName=PrivilegedProcessHandleFromUnsignedModule ImageFileName="*\\Temp\\*"
 ```
----## ProcessExecOnPackedExecutable Table: Packed Executable Execution Event
+---
+## ProcessExecOnPackedExecutable Table: Packed Executable Execution Event
 
 ### 1. Table Name
 **ProcessExecOnPackedExecutable**
@@ -4502,7 +4551,8 @@ event_simpleName=ProcessExecOnPackedExecutable FileSubType=4
 // Search for executables packed with Themida or VMProtect, which are often used in advanced malware
 event_simpleName=ProcessExecOnPackedExecutable FileSubType IN (3, 5)
 ```
----## ProcessExecOnRDPFile Table: RDP File Execution Event
+---
+## ProcessExecOnRDPFile Table: RDP File Execution Event
 
 ### 1. Table Name
 **ProcessExecOnRDPFile**
@@ -4540,7 +4590,8 @@ event_simpleName=ProcessExecOnRDPFile
 // Investigate a specific process ID that was executed via RDP
 event_simpleName=ProcessExecOnRDPFile TargetProcessId="6212"
 ```
----## ProcessExecOnSMBFile Table: Remote Execution from SMB Share Event
+---
+## ProcessExecOnSMBFile Table: Remote Execution from SMB Share Event
 
 ### 1. Table Name
 **ProcessExecOnSMBFile**
@@ -4594,7 +4645,8 @@ event_simpleName=ProcessExecOnSMBFile UserSid="S-1-5-21-1234567890-123456789-123
 // Look for remote executions within a specific domain
 event_simpleName=ProcessExecOnSMBFile LogonDomain="FINANCE"
 ```
----## ProcessInjection Table: Process Injection Event
+---
+## ProcessInjection Table: Process Injection Event
 
 ### 1. Table Name
 **ProcessInjection**
@@ -4650,7 +4702,8 @@ event_simpleName=ProcessInjection ModuleName="*mimikatz*.dll"
 // Investigate injection attempts targeting a specific process ID
 event_simpleName=ProcessInjection TargetProcessId="1234"
 ```
----## Crowdstrike Table: ProcessRollup2
+---
+## Crowdstrike Table: ProcessRollup2
 
 ### 1. Table Name
 
@@ -4827,7 +4880,8 @@ event_simpleName=PythonFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find Python scripts written to a temporary directory
 event_simpleName=PythonFileWritten TargetFileName="*\\Temp\\*.py"
 ```
----## QuarantinedFile Table: File Quarantine Event
+---
+## QuarantinedFile Table: File Quarantine Event
 
 ### 1. Table Name
 **QuarantinedFile**
@@ -4873,7 +4927,8 @@ event_simpleName=QuarantinedFile IsOnRemovableDisk=true
 // Find quarantined files in a specific user's download folder
 event_simpleName=QuarantinedFile ImageFileName="*\\Downloads\\*"
 ```
----## QuarantinedFileState Table: Quarantined File State Event
+---
+## QuarantinedFileState Table: Quarantined File State Event
 
 ### 1. Table Name
 **QuarantinedFileState**
@@ -4927,7 +4982,8 @@ event_simpleName=QuarantinedFileState IsOnRemovableDisk=true
 // Show the original path and the quarantine path for all currently quarantined files
 event_simpleName=QuarantinedFileState QuarantinedFileState=1 | table ImageFileName, QuarantinedFileName
 ```
----## RansomwareCreateFile Table: Ransomware File Creation Event
+---
+## RansomwareCreateFile Table: Ransomware File Creation Event
 
 ### 1. Table Name
 **RansomwareCreateFile**
@@ -5028,7 +5084,8 @@ event_simpleName=RansomwareFileAccessPattern TargetFileName="*.locked"
 // Investigate the command line used by processes flagged for ransomware-like file access
 event_simpleName=RansomwareFileAccessPattern | table CommandLine, ImageFileName, SourceFileName, TargetFileName
 ```
----## RansomwareOpenFile Table: Ransomware File Open Event
+---
+## RansomwareOpenFile Table: Ransomware File Open Event
 
 ### 1. Table Name
 **RansomwareOpenFile**
@@ -5068,7 +5125,8 @@ event_simpleName=RansomwareOpenFile TargetFileName="*.docx" OR TargetFileName="*
 // Find ransomware activity within a specific user's profile
 event_simpleName=RansomwareOpenFile TargetFileName="C:\\Users\\jsmith\\*"
 ```
----## RansomwareRenameFile Table: Ransomware File Rename Event
+---
+## RansomwareRenameFile Table: Ransomware File Rename Event
 
 ### 1. Table Name
 **RansomwareRenameFile**
@@ -5122,7 +5180,8 @@ event_simpleName=RansomwareRenameFile | stats count by ImageFileName
 // Search for files being renamed by a process with a specific command line
 event_simpleName=RansomwareRenameFile CommandLine="* -encrypt *"
 ```
----## RarFileWritten Table: File Written Event
+---
+## RarFileWritten Table: File Written Event
 
 ### 1. Table Name
 **RarFileWritten**
@@ -5178,7 +5237,8 @@ event_simpleName=RarFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find RAR files based on their context base file name, which might indicate staging for exfiltration
 event_simpleName=RarFileWritten ContextBaseFileName="*backup*.rar"
 ```
----## RecentlyModifiedFileExecutedInContainer Table: Recently Modified File Execution Event
+---
+## RecentlyModifiedFileExecutedInContainer Table: Recently Modified File Execution Event
 
 ### 1. Table Name
 **RecentlyModifiedFileExecutedInContainer**
@@ -5234,7 +5294,8 @@ event_simpleName=RecentlyModifiedFileExecutedInContainer ParentImageFileName IN 
 // Look for specific suspicious file names being executed
 event_simpleName=RecentlyModifiedFileExecutedInContainer TargetFileName="*payload*" OR TargetFileName="*shell*"
 ```
----## ReflectiveDotnetModuleLoad Table: Reflective .NET Module Load Event
+---
+## ReflectiveDotnetModuleLoad Table: Reflective .NET Module Load Event
 
 ### 1. Table Name
 **ReflectiveDotnetModuleLoad**
@@ -5290,7 +5351,8 @@ event_simpleName=ReflectiveDotnetModuleLoad ImageFileName!="C:\\Windows\\Microso
 // Investigate reflective loading based on the command line arguments used
 event_simpleName=ReflectiveDotnetModuleLoad CommandLine="*System.Reflection.Assembly*"
 ```
----## RegCrowdstrikeValueUpdate Table: Crowdstrike Registry Value Update Event
+---
+## RegCrowdstrikeValueUpdate Table: Crowdstrike Registry Value Update Event
 
 ### 1. Table Name
 **RegCrowdstrikeValueUpdate**
@@ -5339,7 +5401,8 @@ event_simpleName=RegCrowdstrikeValueUpdate RegOperationType=2
 // Search for specific strings being written to CrowdStrike registry keys
 event_simpleName=RegCrowdstrikeValueUpdate RegStringValue="*disabled*"
 ```
----## RegGenericValueUpdate Table: Registry Value Update Event
+---
+## RegGenericValueUpdate Table: Registry Value Update Event
 
 ### 1. Table Name
 **RegGenericValueUpdate**
@@ -5392,7 +5455,8 @@ event_simpleName=RegGenericValueUpdate RegStringValue="*\\Temp\\*" OR RegStringV
 // Filter for only "Set Value" operations
 event_simpleName=RegGenericValueUpdate RegOperationType=1
 ```
----## RegSystemConfigValueUpdate Table: System Registry Modification Event
+---
+## RegSystemConfigValueUpdate Table: System Registry Modification Event
 
 ### 1. Table Name
 **RegSystemConfigValueUpdate**
@@ -5445,7 +5509,8 @@ event_simpleName=RegSystemConfigValueUpdate RegValueName="EnableLUA"
 // Filter for only "Set Value" operations on system configuration keys
 event_simpleName=RegSystemConfigValueUpdate RegOperationType=1
 ```
----## RegistryHiveFileWritten Table: Registry Hive Written Event
+---
+## RegistryHiveFileWritten Table: Registry Hive Written Event
 
 ### 1. Table Name
 **RegistryHiveFileWritten**
@@ -5492,7 +5557,8 @@ event_simpleName=RegistryHiveFileWritten TargetFileName="*\\Temp\\*" OR TargetFi
 // Search for instances where the SECURITY hive was written, which contains LSA secrets
 event_simpleName=RegistryHiveFileWritten ContextBaseFileName="SECURITY"
 ```
----## RpmFileWritten Table: File Written Event
+---
+## RpmFileWritten Table: File Written Event
 
 ### 1. Table Name
 **RpmFileWritten**
@@ -5535,7 +5601,8 @@ event_simpleName=RpmFileWritten TargetFileName="/tmp/*.rpm" OR TargetFileName="/
 // Find RPM files based on their context base file name
 event_simpleName=RpmFileWritten ContextBaseFileName="*payload*.rpm"
 ```
----## RtfFileWritten Table: File Written Event
+---
+## RtfFileWritten Table: File Written Event
 
 ### 1. Table Name
 **RtfFileWritten**
@@ -5589,7 +5656,8 @@ event_simpleName=RtfFileWritten FileOperatorSid="S-1-5-21-12345-67890-*"
 // Find RTF files with a potentially suspicious name written to a download folder
 event_simpleName=RtfFileWritten ContextBaseFileName="*invoice*.rtf" TargetFileName="*\\Downloads\\*"
 ```
----## ScheduledTaskModified Table: Scheduled Task Modification Event
+---
+## ScheduledTaskModified Table: Scheduled Task Modification Event
 
 ### 1. Table Name
 **ScheduledTaskModified**
@@ -5644,7 +5712,8 @@ event_simpleName=ScheduledTaskModified UserName="*svc_account*"
 // Search the raw Task XML for suspicious arguments or configurations
 event_simpleName=ScheduledTaskModified TaskXml="*Invoke-Expression*" OR TaskXml="*DownloadString*"
 ```
----## ScheduledTaskRegistered Table: Scheduled Task Creation Event
+---
+## ScheduledTaskRegistered Table: Scheduled Task Creation Event
 
 ### 1. Table Name
 **ScheduledTaskRegistered**
@@ -5700,7 +5769,8 @@ event_simpleName=ScheduledTaskRegistered TaskExecCommand="*powershell.exe*"
 // Investigate the full XML for tasks that run with SYSTEM privileges
 event_simpleName=ScheduledTaskRegistered TaskXml="*<UserId>S-1-5-18</UserId>*"
 ```
----## ScreenshotTakenEtw Table: Screenshot Taken Event
+---
+## ScreenshotTakenEtw Table: Screenshot Taken Event
 
 ### 1. Table Name
 **ScreenshotTakenEtw**
