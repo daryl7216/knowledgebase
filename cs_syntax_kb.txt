@@ -1,0 +1,48 @@
+Crowdstrike Query Language Syntax
+
+1. Comments
+
+You can comment single lines or multiple lines.
+
+a. Single line example:
+// comment
+
+b. Multiple lines example:
+/* comment 1
+comment 2
+comment 3 */
+
+---
+2. Query Filters
+
+a. Implicit AND
+
+Example:
+a1. foo < 42 + 3
+a2. (foo < 42) AND "*+*" AND "*3*"
+a1 and a2 are equivalent.
+
+b. Implicit Pipeline
+
+Example:
+b1. src="client" ip="127.0.0.1"
+b2. src="client"
+    | ip="127.0.0.1"
+b1 and b2 are equivalent.
+
+c. Free-Text Filters
+
+Example 1:
+c1. foo
+c2. *foo*
+c1 and c2 find all events matching foo in any field of the events. Without field specification, text is treated as if there is leading and trailing wildcards, so c1 and c2 are equivalent.
+
+Example 2:
+c3. "foo bar"
+c4. "*foo bar*"
+Use quotes if the search string is a keyword or contains white spaces or special characters. Without field specification, text is treated as if there is leading and trailing wildcards, so c3 and c4 are equivalent.
+
+Example 3:
+c5. "msg:\"welcome\""
+Quotes can be included in the search string by escaping them with backslashes.
+
