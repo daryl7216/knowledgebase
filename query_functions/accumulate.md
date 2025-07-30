@@ -1,6 +1,6 @@
 # accumulate()
 
-[cite_start]The `accumulate()` function applies an aggregation function cumulatively to a sequence of events[cite: 3]. [cite_start]It is useful for calculating running totals, running averages, or other cumulative metrics over time or across a series of events[cite: 3, 4].
+The `accumulate()` function applies an aggregation function cumulatively to a sequence of events. It is useful for calculating running totals, running averages, or other cumulative metrics over time or across a series of events.
 
 ***
 
@@ -8,14 +8,14 @@
 
 | Parameter | Type | Required/Default | Description |
 | :--- | :--- | :--- | :--- |
-| [cite_start]**current** | enum | optional <br> default: `include` [cite: 6, 7] | [cite_start]Controls whether to include the current event in the accumulation[cite: 6]. [cite_start]<br> **Values:** `exclude`, `include`[cite: 6]. |
-| [cite_start]**function** | array of aggregate functions | required [cite: 6] | [cite_start]The aggregator function to accumulate (e.g., `sum()`, `avg()`, `count()`)[cite: 6]. [cite_start]It only accepts functions that output at most a single event[cite: 6]. [cite_start]The parameter name `function` can be omitted[cite: 8]. |
+| **current** | enum | optional <br> default: `include` | Controls whether to include the current event in the accumulation. <br> **Values:** `exclude`, `include`. |
+| **function** | array of aggregate functions | required | The aggregator function to accumulate (e.g., `sum()`, `avg()`, `count()`). It only accepts functions that output at most a single event. The parameter name `function` can be omitted. |
 
 ***
 
 ## Function Operation
 
-[cite_start]The `accumulate()` function must be used after an aggregator function (like `head()`, `sort()`, `bucket()`, or `timeChart()`) to ensure event ordering, as it requires a specific order to calculate cumulative values correctly[cite: 12, 13, 14]. [cite_start]Only functions that produce a single value per event (e.g., `sum()`, `avg()`, `count()`) can be used within the `accumulate()` function[cite: 15].
+The `accumulate()` function must be used after an aggregator function (like `head()`, `sort()`, `bucket()`, or `timeChart()`) to ensure event ordering, as it requires a specific order to calculate cumulative values correctly. Only functions that produce a single value per event (e.g., `sum()`, `avg()`, `count()`) can be used within the `accumulate()` function.
 
 ***
 
@@ -23,15 +23,15 @@
 
 ### Calculate Running Average of Field Values
 
-[cite_start]This example uses `accumulate()` with the `avg()` function to compute a running average[cite: 18, 19].
+This example uses `accumulate()` with the `avg()` function to compute a running average.
 
-* [cite_start]**Query Example** [cite: 20]
+* **Query Example**
     ```
     head()
     | accumulate(avg(value))
     ```
 
-* [cite_start]**Input Event Data** [cite: 29, 30]
+* **Input Event Data**
 
 | key | value |
 | :-- | :-- |
@@ -41,10 +41,10 @@
 | d | 2 |
 
 * **Step-by-Step**
-    1.  [cite_start]`head()`: Ensures events are ordered by time, selecting the oldest ones[cite: 36].
-    2.  [cite_start]`accumulate(avg(value))`: Computes the running average of the `value` field for all events, including the current one[cite: 39].
+    1.  `head()`: Ensures events are ordered by time, selecting the oldest ones.
+    2.  `accumulate(avg(value))`: Computes the running average of the `value` field for all events, including the current one.
 
-* [cite_start]**Result Event Data** [cite: 45, 47]
+* **Result Event Data**
 
 | _avg | key | value |
 | :-- | :-- | :-- |
@@ -57,15 +57,15 @@
 
 ### Compute Cumulative Aggregation Across Buckets
 
-[cite_start]This example shows how to use `accumulate()` with `timeChart()` to aggregate values across time intervals[cite: 48, 49].
+This example shows how to use `accumulate()` with `timeChart()` to aggregate values across time intervals.
 
-* [cite_start]**Query Example** [cite: 50, 52]
+* **Query Example**
     ```
     timeChart(span=1000ms, function=sum(value))
     | accumulate(sum(_sum), as=_accumulated_sum)
     ```
 
-* [cite_start]**Input Event Data** [cite: 57, 58]
+* **Input Event Data**
 
 | key @timestamp | value |
 | :--- | :-- |
@@ -76,10 +76,10 @@
 | b 1451606302201 | 6 |
 
 * **Step-by-Step**
-    1.  [cite_start]`timeChart(span=1000ms, function=sum(value))`: Groups data into 1-second buckets and sums the `value` field for each bucket, creating a new field called `_sum`[cite: 63].
-    2.  [cite_start]`accumulate(sum(_sum), as=_accumulated_sum)`: Calculates a running total of the values in the `_sum` field and stores the result in a new field named `_accumulated_sum`[cite: 67].
+    1.  `timeChart(span=1000ms, function=sum(value))`: Groups data into 1-second buckets and sums the `value` field for each bucket, creating a new field called `_sum`.
+    2.  `accumulate(sum(_sum), as=_accumulated_sum)`: Calculates a running total of the values in the `_sum` field and stores the result in a new field named `_accumulated_sum`.
 
-* [cite_start]**Result Event Data** [cite: 73, 74]
+* **Result Event Data**
 
 | _bucket | _sum | _accumulated_sum |
 | :--- | :-- | :-- |
@@ -92,15 +92,15 @@
 
 ### Compute Cumulative Aggregation For a Specific Group
 
-[cite_start]This example demonstrates using `accumulate()` within the `groupBy()` function to compute a cumulative total for a specific group[cite: 92, 93, 99].
+This example demonstrates using `accumulate()` within the `groupBy()` function to compute a cumulative total for a specific group.
 
-* [cite_start]**Query Example** [cite: 94, 97]
+* **Query Example**
     ```
     head()
     | groupBy(key, function = accumulate(sum(value)))
     ```
 
-* [cite_start]**Input Event Data** [cite: 102, 103]
+* **Input Event Data**
 
 | key | value |
 | :-- | :-- |
@@ -111,10 +111,10 @@
 | b | 6 |
 
 * **Step-by-Step**
-    1.  [cite_start]`head()`: Selects the oldest events, ordered by time[cite: 108].
-    2.  [cite_start]`groupBy(key, function = accumulate(sum(value)))`: Groups data by the `key` field and accumulates the sum of the `value` field within each group[cite: 112].
+    1.  `head()`: Selects the oldest events, ordered by time.
+    2.  `groupBy(key, function = accumulate(sum(value)))`: Groups data by the `key` field and accumulates the sum of the `value` field within each group.
 
-* [cite_start]**Result Event Data** [cite: 119, 120]
+* **Result Event Data**
 
 | key | _sum | value |
 | :-- | :-- | :-- |
