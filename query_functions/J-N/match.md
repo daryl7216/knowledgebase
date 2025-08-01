@@ -74,6 +74,8 @@ This example demonstrates how to compare multiple pairs of event fields against 
     | :--- | :--- | :--- |
     | f | C | e |
 
+---
+
 ### Filter For Items Not Part of Data Set Using `match()`
 
 This example shows how to find the set difference using the `match()` function with negation to search and find IP addresses that are not part of a known list (`known_ips.csv`).
@@ -112,6 +114,8 @@ This example shows how to find the set difference using the `match()` function w
     | :--- | :--- | :--- | :--- | :--- | :--- |
     | 2025-04-01T07:00:00Z | 192.168.1.101 | 10.0.0.50 | 52431 | 443 | TCP |
     | 2025-04-01T07:00:01Z | 172.16.0.24 | 8.8.8.8 | 33221 | 53 | UDP |
+
+---
 
 ### Match Event Fields Against Lookup Table Values Adding Specific Columns
 
@@ -159,6 +163,8 @@ This example compares event IP fields with CIDR ranges in a lookup table using t
 
     Notice how only the specified fields from the `cidr-file.csv` file appear in output.
 
+---
+
 ### Match Event Fields Against Lookup Table Values Allowing All Events to Pass
 
 This example compares event fields with column values in a lookup table using the `match()` function with the `strict` parameter set to `false` to allow also non-matching events to pass. When `strict` is set to `false`, all events (including non-matching ones) are passed through, but only events with matches will be enriched with all other columns of the matching row.
@@ -203,6 +209,8 @@ This example compares event fields with column values in a lookup table using th
     | 2024-01-15T09:02:00.000Z | dev-user-456 | code\_push | 10.0.0.3 | Engineering | developer |
 
     After matching, the output combines original event fields with matched user details. Notice how also non-matching events (in this example `unknown-user`) appear in output.
+
+---
 
 ### Match Event Fields Against Patterns in Lookup Table Values
 

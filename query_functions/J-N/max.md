@@ -72,6 +72,8 @@ This alert query tries to balance reacting when there are problems with parsers 
   * **Summary and Results**
     This query is used to set up alerts for parser issues. Setting up alerts for parser issues will allow to proactively reach out to customers where their queries are being throttled and help them.
 
+---
+
 ### Calculate Minimum and Maximum Response Times
 
 This example calculates minimum and maximum response times using multiple aggregate functions in square brackets.
@@ -110,6 +112,8 @@ This example calculates minimum and maximum response times using multiple aggreg
 
     Note that only one row is returned containing both calculated values.
 
+---
+
 ### Compute Aggregate Value for Each Array Element With Same Index
 
 This example computes an aggregate value for each array element with the same index using the `array::reduceColumn()` function.
@@ -142,6 +146,8 @@ This example computes an aggregate value for each array element with the same in
     | :--- | :--- | :--- |
     | 5 | 2 | 3 |
 
+---
+
 ### Compute an Aggregated Value of an Array on All Events
 
 This example computes an aggregated value of a flat array on all events using the `array::reduceAll()` function.
@@ -160,6 +166,8 @@ This example computes an aggregated value of a flat array on all events using th
 
   * **Summary and Results**
     The query is used to compute a value from all events and array elements of a specified array. The `reduce()` method is recommended when you need to have a single value returned from iterating over your array. Only aggregate functions that return a single event with a single field (such as `avg()`, `count()`, `sum()`, `max()` etc.) are allowed as the function argument.
+
+---
 
 ### Create a Pivot Table
 
@@ -207,6 +215,8 @@ This example creates a view of LogScale activity by creating a pivot table.
     | :--- | :--- | :--- |
     | 1700546666592 | 1699004139419 | 1700546666676 |
     | 007WGPBX9YbvZbKOrBMd5fgH | 007WGPBX9YbvZbKOrBMd5fgH | 007WGPBX9YbvZbKOrBMd\! |
+
+---
 
 ### Rounding Within a Timechart
 

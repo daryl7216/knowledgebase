@@ -41,6 +41,8 @@ This example demonstrates how to filter events based on the minimum response tim
     _min > 5
     ```
 
+---
+
 ### Alert Query for Parsers Issues
 
 This alert query tries to balance reacting when there are problems with parsers, without being too restrictive.
@@ -71,6 +73,8 @@ This alert query tries to balance reacting when there are problems with parsers,
 
   * **Summary and Results**
     This query is used to set up alerts for parser issues. Setting up alerts for parser issues will allow proactively reaching out to customers where their queries are being throttled and help them.
+
+---
 
 ### Calculate Minimum and Maximum Response Times
 

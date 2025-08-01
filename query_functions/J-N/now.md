@@ -39,6 +39,8 @@ This example uses the `now()` function in a comparison to determine if an event 
   * **Summary and Results**
     The query is used to quickly identify events that are more than 1 second older than the end of the search interval. Assigning the current time of the search time interval to a field is useful when, for example, searching for security events. When running a query, the events you are searching do not know the span of the search (the system just returns a list of the events in the given time interval), but you might want to show the relative time of the event timestamp compared to the search window. For example, if you search for a bunch of events that happened yesterday and you are searching from yesterday 00:00 to 23:59, you then want to calculate '3 hours before' or even '2s before' because when searching for security events that time difference may be important.
 
+---
+
 ### Process Current Time in Live Queries
 
 This example uses the `now()` function in live queries to process the current time for each event.
